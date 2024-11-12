@@ -1,4 +1,4 @@
-# ELECTRE Tri-B documentation
+# How-to guides
 
 by Christian Ghiaus (Researcher ID: [ORCID](https://orcid.org/0000-0001-5561-1245), [SciProfiles](https://sciprofiles.com/profile/2970335), [Scopus](https://www.scopus.com/authid/detail.uri?authorId=6603390490), [Web of Science](https://www.webofscience.com/wos/author/record/1651371), [HAL](https://cv.hal.science/cghiaus))
 
@@ -7,7 +7,7 @@ by Christian Ghiaus (Researcher ID: [ORCID](https://orcid.org/0000-0001-5561-124
 
 ![Documentation](../../figs/docs_how-to.svg)
 
-> Figure 1. Forms of documentation (adapted after [Procida 2017](https://diataxis.fr)).
+> Figure 1. How-to guide type of documentation (adapted after [Procida 2017](https://diataxis.fr)).
 
 __How-to Guides__ provide directions for specific goals. Users follow steps to accomplish a task (_action_)
 applying existing knowledge to solve particular problems (_application_).

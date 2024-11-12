@@ -32,7 +32,7 @@ Do:
         - bad >: alteratives worse than b1 (bad) base profile.
         - (bad, good): alternatives between base profiles bad and good.
         - good <: alternatives better than b2 (good) base profile.
-    defined by base profiles by using outranking.
+    defined by base profiles.
 
 ----
 See:

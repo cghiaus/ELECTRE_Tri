@@ -75,25 +75,3 @@ print(opti_sort.to_frame(name="alternatives").rename_axis("categories"))
 pessi_sort = et.sort(pessimistic)
 print('Pessimistic sorting')
 print(pessi_sort.to_frame(name="alternatives").rename_axis("categories"))
-
-# data_file = '../data/default_categories.csv'
-# print("Example of data file")
-# A = pd.read_csv(data_file, index_col=0)
-
-# A, L, w = et.read_electre_tri_extreme_base_profile(data_file)
-# B = et.base_profile(L)
-# T = et.threshold(B)
-
-# opti, pessi = et.electre_tri_b(A, B, T, w,
-#                              credibility_threshold=0.7)
-# print("\nOptimistic ranking:")
-# print(opti)
-
-# print("\nPessimistic ranking:")
-# print(pessi)
-
-# print('Optimistic sorting')
-# print(et.sort(opti).to_frame(name="alternatives").rename_axis("categories"))
-
-# print('Pessimistic sorting')
-# print(et.sort(pessi).to_frame(name="alternatives").rename_axis("categories"))

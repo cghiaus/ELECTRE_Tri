@@ -34,7 +34,10 @@ Do:
         - good <: alternatives better than b2 (good) base profile.
     defined by base profiles by using outranking.
 
-See docs/explnation/electre_tri-b_explained.ipynb for more details.
+----
+See:
+    - docs/tutorials/bldg_retrofit_base.ipynb
+    - docs/explanation/electre_tri-b_explained.ipynb
 """
 
 import sys

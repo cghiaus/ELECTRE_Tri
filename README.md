@@ -20,6 +20,7 @@ ELECTRE_Tri-master
 │   ├── reference
 │   └── tutorials
 ├── examples
+├── figs
 ├── src
 │   ├── __init__.py
 │   ├── electre_tri.py
@@ -39,6 +40,8 @@ ELECTRE_Tri-master
     - `tutorials`: guided steps to solve a meaningful problem; starting point for those new to the methods.
 
 - `examples`: Python scripts that use the modules from `/src` and data from `/data`.
+
+- `figs`: modifialble figures in `.svg` format.
 
 - `src`: source code of Python modules.
     - `electre-tri.py`: Multiple-Criteria Decision-Making.

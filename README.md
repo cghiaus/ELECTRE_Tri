@@ -30,7 +30,7 @@ ELECTRE_Tri-master
 └── requirements.txt
 ```
 ## Summary
-- `data`: .csv files for ELECTRE Tri-B and Simos' revised method.
+- `data`: .csv data files for ELECTRE Tri-B and Simos' revised method.
 
 - `docs`: documentation
     - `explanation`: description of concepts (to read for details on ELECTRE Tri-B and Simos method for weights of criteria).

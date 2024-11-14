@@ -9,42 +9,45 @@ ELECTRE Tri-B is a Multiple-Criteria Decision-Making ([MCDM](https://en.m.wikipe
 
 This repository contains a Python implementation of ELECTRE Tri-B, along with explanatory materials and example data.
 
-## Repository contents
+## Contents
 
 ```
 ELECTRE_Tri-master
 ├── data
 ├── docs
 │   ├── explanation
-│   ├── how_to_guide
+│   ├── how_to_guides
 │   ├── reference
 │   └── tutorials
 ├── examples
-│   └── ELECTRE_Tri
-│       ├── data
-│       ├── ELECTRE_Tri_1.ipynb
-│       └── ELECTRE_Tri_2.ipynb
-│       └── ELECTRE_Tri_2.ipynb
 ├── src
 │   ├── __init__.py
-│   ├── ELECTRE_Tri_B.py
-│   └── Simos_revised.py
+│   ├── electre_tri.py
+│   └── simos_revised.py
 ├── LICENSE
 ├── README.md
 ├── environment.yml
 └── requirements.txt
 ```
+## Summary
+- `data`: .csv files for ELECTRE Tri-B and Simos' revised method.
 
+- `docs`: documentation
+    - `explanation`: description of concepts (to read for details on ELECTRE Tri-B and Simos method for weights of criteria).
+    - `how_to_guides`: directions for specific goals (useful to solve specific tasks when accustomed with the methods).
+    - `reference`: documentation of functions implemented in the modules of `/src`.
+    - `tutorials`: guided steps to solve a meaningful problem; starting point for those new to the methods.
 
-Python module, explanations and examples for:
+- `examples`: Python scripts that use the modules from `/src` and data from `/data`.
 
-- `ELECTRE_Tri/`: Mulitple-Criteria Decision-Making.
-- `Simos_revised/`: Simos' method for determining weights of criteria in ELECTRE type methods.
+- `src`: source code of Python modules.
+    - `electre-tri.py`: Multiple-Criteria Decision-Making.
+    - `simos_revised`: Simos' method for determining weights of criteria in ELECTRE type methods.
 
 ## Usage
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cghiaus/ELECTRE_Tri/HEAD)
 
 1. Launch binder.
-2. Upload your data file (which describes the ELECTRE Tri or the weighing problem) in `data/` folder.
-3. Run the notebook to get the results.
+2. Upload your data file (which describes the ELECTRE Tri or the weighing problem) in `/data` folder.
+3. Modify and run the scripts from `/examples` to get the results.

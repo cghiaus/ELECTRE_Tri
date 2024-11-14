@@ -12,7 +12,7 @@ This repository contains a Python implementation of ELECTRE Tri-B, along with ex
 ## Contents
 
 ```
-ELECTRE_Tri-master
+ELECTRE_Tri-main
 ├── data
 ├── docs
 │   ├── explanation

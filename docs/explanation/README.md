@@ -8,8 +8,8 @@ by Christian Ghiaus (Researcher ID: [ORCID](https://orcid.org/0000-0001-5561-124
 > Figure 1. Explanation type of documentation (adapted after [Procida 2017](https://diataxis.fr)).
 
 
-__Explanation__ is understanding oriented.
- The concepts are explained (_cognition_) in order to gain new insights and knowledge (_acquisition_) ([Procida 2017](https://diataxis.fr)).
+__Explanation__ is _understanding_ oriented.
+The concepts are explained (_cognition_) in order to gain new insights and knowledge (_acquisition_) ([Procida 2017](https://diataxis.fr)).
 
 The explanations are given for: 
 - ELECTRE Tri-B multiple-criteria decision-making (MCDM) method.

@@ -9,7 +9,7 @@ by Christian Ghiaus (Researcher ID: [ORCID](https://orcid.org/0000-0001-5561-124
 
 > Figure 1. How-to guide type of documentation (adapted after [Procida 2017](https://diataxis.fr)).
 
-__How-to Guides__ provide directions for specific goals. Users follow steps to accomplish a task (_action_)
+__How-to Guides__ provide directions for specific _goals_. Users follow steps to accomplish a task (_action_)
 applying existing knowledge to solve particular problems (_application_).
 
 - how to obtain weights for criteria (Simos')

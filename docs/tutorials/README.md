@@ -13,11 +13,11 @@ __Tutorials__ are structured _learning_ experiences through a series of guided s
 
 __Contents__
 
-`Simos_revised_tutorial.ipynb` tutorial for finding the weights of criteria.
-
 `bldg_retrofit_base.ipynb` tutorial on energy retrofit of a building using base profiles for categories.
 
 `bldg_retrofit_level.ipynb` tutorial on energy retrofit of a building using extreme levels in order to find equidistant base profiles (and, consequently, the categories).
+
+`simos_revised_tutorial.ipynb` tutorial for finding the weights of criteria.
 
 # Bibliography
 Procida, D. (2017). Diátaxis documentation framework. URL https://diataxis.fr.

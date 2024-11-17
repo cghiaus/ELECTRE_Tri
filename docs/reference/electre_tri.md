@@ -88,6 +88,67 @@ where `simple_example.csv` is:
 
 ---
 
+---
+
+## <kbd>function</kbd> `read_pelectre_tri_data`
+
+```python
+read_pelectre_tri_data(filename)
+```
+
+Reads the data of the pELECTRE Tri problem. 
+
+
+
+**Args:**
+ 
+ - <b>`filename`</b> (str):  Name of .csv file containing the data of the problem. 
+
+
+
+**Returns:**
+ 
+ - <b>`A`</b> (DataFrame):  Performance matrix of alternatives (rows) for criteria (columns). 
+
+
+ - <b>`S`</b> (DataFrame):  Standard deviation of performance matrix of alternatives (rows) for criteria (columns). 
+
+
+ - <b>`B`</b> (DataFrame):  Base profiles in ascending order for criteria (columns). 
+
+
+ - <b>`T`</b> (DataFrame):  Indifference (q), preference (p) and veto (v) thresholds for each criterion (column). 
+
+
+ - <b>`w`</b> (Series):  Weight for each criterion. 
+
+Example 
+------- 
+
+``` data_file = './data/simple_example_std.csv'```
+``` A, S, B, T, w = read_pelectre_tri_data(data_file)``` ``` ...```
+
+where `simple_example.csv` is:
+
+
+.. code-block:: none
+
+    type, profile, c1, c2
+    A,    a1,     8.5, 18
+    A,    a2,      14, 16
+    A,    a3,       5, 27
+    S,    a1,    0.85, 1.8
+    S,    a2,     1.4, 1.6
+    S,    a3,     0.5, 2.7
+    B,    b1,      10, 15
+    B,    b2,      15, 20
+    T,     q,       1, 2
+    T,     p,       2, 4
+    T,     v,       4, 8
+    w,      ,     0.7, 0.3
+
+---
+
 ## <kbd>function</kbd> `read_electre_tri_extreme_base_profile`
 
 ```python

@@ -8,7 +8,7 @@ by Christian Ghiaus (Researcher ID: [ORCID](https://orcid.org/0000-0001-5561-124
 > Figure 1. Reference type of documentation (adapted after [Procida 2017](https://diataxis.fr)).
 
 
-__Reference__ offers detailed technical information on Python modules in an orderly way. Users can look for information (_cognition_) in order to apply it to their existing projects (_application_). ([Procida 2017](https://diataxis.fr)).
+__Reference__ offers detailed technical _information_ on functions from Python modules in an orderly way. Users can look for information (_cognition_) in order to apply it to their existing projects (_application_). ([Procida 2017](https://diataxis.fr)).
 
 Reference of the functions of Python modules: 
 - `/src/electre_tri.py`.

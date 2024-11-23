@@ -14,11 +14,11 @@ Documentation is organized according to Diátaxis framework ([Procida 2017](http
 - acquisition vs. application.
 
 These axes create four quadrants that define the characteristics of each documentation type (Figure 1):
-- __Tutorials__ are structured learning experiences through a series of guided steps to solve a meaningful problem. Users actively engage with the material (_action_) aimed at helping them gain new knowledge and skills (_acquisition_).
-- __How-to Guides__ provide directions for specific goals. Users follow steps to accomplish a task (_action_)
+- __Tutorials__ are structured _learning_ experiences through a series of guided steps to solve a meaningful problem. Users actively engage with the material (_action_) aimed at helping them gain new knowledge and skills (_acquisition_).
+- __How-to guides__ provide directions for specific _goals_. Users follow steps to accomplish a task (_action_)
 applying existing knowledge to solve particular problems (_application_).
-- __Reference__ offers detailed technical information on Python modules in an orderly way. Users can look for information (_cognition_) in order to apply it to their existing projects (_application_).
-- __Explanation__ provides context and deeper understanding. Users study explained concepts (_cognition_) helping them gain new insights and knowledge (_acquisition_)
+- __Reference__ offers detailed _information_ on functions from Python modules. Users can look for description (_cognition_) in order to apply it to their existing projects (_application_).
+- __Explanation__ provides context and deeper _understanding_. Users study explained concepts (_cognition_) helping them gain new insights and knowledge (_acquisition_)
 
 # Bibliography
 Procida, D. (2017). Diátaxis documentation framework. URL https://diataxis.fr.

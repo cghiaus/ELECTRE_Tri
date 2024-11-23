@@ -68,9 +68,6 @@ where `simple_example.csv` is:
     w,      ,     0.7, 0.3
 ```
 
-
----
-
 ---
 
 ## <kbd>function</kbd> `read_pelectre_tri_data`

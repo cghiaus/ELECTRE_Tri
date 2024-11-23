@@ -7,28 +7,11 @@ Last modified on Tue Oct 29 10:39:45 2024
 
 @author: cghiaus 
 
-ELECTRE Tri-B 
+ELECTRE Tri-B module
 
-In ELECTRE Tri-B each category is characterized by two reference profiles corresponding to the limits of this category. In contrast, in ELECTRE Tri-C each category is characterized by one reference profile only, being representative of the category [Corente et al; 2016]. 
+In ELECTRE Tri-B each category is characterized by two reference profiles corresponding to the limits of this category. In contrast, in ELECTRE Tri-C each category is characterized by one reference profile only, being representative of the category [Corente et al; 2016].
 
-__Bibliography__
-
-Almeida-Dias, J., Figueira, J. R., & Roy, B. (2010). Electre Tri-C: A multiple criteria sorting method based on characteristic reference actions. European Journal of Operational Research, 204(3), 565-580. https://doi.org/10.1016/j.ejor.2009.10.018 https://hal.science/hal-00907583v1/document 
-
-Mousseau, V., Slowinski, R., & Zielniewicz, P. (1999). ELECTRE TRI 2.0 Methodological guide and user’s manual. Universite Paris Dauphine, Document du LAMSADE, 111, 263-275. https://www.lamsade.dauphine.fr/mcda/biblio/PDF/mous3docl99.pdf 
-
-Mousseau, V., Slowinski, R., & Zielniewicz, P. (2000). A user-oriented implementation of the ELECTRE-TRI method integrating preference elicitation support. Computers & operations research, 27(7-8), 757-777. https://doi.org/10.1016/S0305-0548(99)00117-3 https://www.lamsade.dauphine.fr/mcda/biblio/PDF/mous3cor00.pdf 
-
-J. Almeida-Dias , J. R. Figueira , B. Roy (2010) A multiple criteria sorting method defining each category by several characteristic reference actions: The Electre Tri-nC method, Cahier du LAMSADE 294, Université Paris Daufine, CNRS https://hal.science/hal-01511223/document 
-
-Corrente, S., Greco, S., & Słowiński, R. (2016). Multiple criteria hierarchy process for ELECTRE Tri methods. European Journal of Operational Research, 252(1), 191-203. https://doi.org/10.1016/j.ejor.2015.12.053 https://pure.port.ac.uk/ws/portalfiles/portal/5001301/GRECO_Multiple_Criteria_Hierarchy_Process_for_ELECTRE_Tri_methods_Postprint.pdf 
-
-Figueira, J. R., Mousseau, V., & Roy, B. (2016). ELECTRE methods. Multiple criteria decision analysis: State of the art surveys, 155-185. https://www.lamsade.dauphine.fr/mcda/biblio/PDF/JFVMBR2005.pdf 
-
-Corrente, S., Greco, S., & Słowiński, R. (2016). Multiple criteria hierarchy process for ELECTRE Tri methods. European Journal of Operational Research, 252(1), 191-203. https://doi.org/10.1016/j.ejor.2015.12.053 https://pure.port.ac.uk/ws/portalfiles/portal/5001301/GRECO_Multiple_Criteria_Hierarchy_Process_for_ELECTRE_Tri_methods_Postprint.pdf 
-
-Baseer, M., Ghiaus, C., Viala, R., Gauthier, N., & Daniel, S. (2023). pELECTRE-Tri: Probabilistic ELECTRE-Tri Method—Application for the Energy Renovation of Buildings. Energies, 16(14), 5296. https://doi.org/10.3390/en16145296 
-
+The functions in `electre_tri.py` (in folder `src`) are organized following, approximately, the workflow.
 
 ---
 
@@ -984,24 +967,27 @@ Example
 ```python
 plot_base_profiles_vs_alternative(B, A.iloc[0], T)
 ```
-
-
-
 ---
 
-## <kbd>function</kbd> `main`
 
-```python
-main()
-```
+# Bibliography
+
+Almeida-Dias, J., Figueira, J. R., & Roy, B. (2010). Electre Tri-C: A multiple criteria sorting method based on characteristic reference actions. European Journal of Operational Research, 204(3), 565-580. https://doi.org/10.1016/j.ejor.2009.10.018 https://hal.science/hal-00907583v1/document 
+
+Mousseau, V., Slowinski, R., & Zielniewicz, P. (1999). ELECTRE TRI 2.0 Methodological guide and user’s manual. Universite Paris Dauphine, Document du LAMSADE, 111, 263-275. https://www.lamsade.dauphine.fr/mcda/biblio/PDF/mous3docl99.pdf 
+
+Mousseau, V., Slowinski, R., & Zielniewicz, P. (2000). A user-oriented implementation of the ELECTRE-TRI method integrating preference elicitation support. Computers & operations research, 27(7-8), 757-777. https://doi.org/10.1016/S0305-0548(99)00117-3 https://www.lamsade.dauphine.fr/mcda/biblio/PDF/mous3cor00.pdf 
+
+J. Almeida-Dias , J. R. Figueira , B. Roy (2010) A multiple criteria sorting method defining each category by several characteristic reference actions: The Electre Tri-nC method, Cahier du LAMSADE 294, Université Paris Daufine, CNRS https://hal.science/hal-01511223/document 
+
+Corrente, S., Greco, S., & Słowiński, R. (2016). Multiple criteria hierarchy process for ELECTRE Tri methods. European Journal of Operational Research, 252(1), 191-203. https://doi.org/10.1016/j.ejor.2015.12.053 https://pure.port.ac.uk/ws/portalfiles/portal/5001301/GRECO_Multiple_Criteria_Hierarchy_Process_for_ELECTRE_Tri_methods_Postprint.pdf 
+
+Figueira, J. R., Mousseau, V., & Roy, B. (2016). ELECTRE methods. Multiple criteria decision analysis: State of the art surveys, 155-185. https://www.lamsade.dauphine.fr/mcda/biblio/PDF/JFVMBR2005.pdf 
+
+Corrente, S., Greco, S., & Słowiński, R. (2016). Multiple criteria hierarchy process for ELECTRE Tri methods. European Journal of Operational Research, 252(1), 191-203. https://doi.org/10.1016/j.ejor.2015.12.053 https://pure.port.ac.uk/ws/portalfiles/portal/5001301/GRECO_Multiple_Criteria_Hierarchy_Process_for_ELECTRE_Tri_methods_Postprint.pdf 
+
+Baseer, M., Ghiaus, C., Viala, R., Gauthier, N., & Daniel, S. (2023). pELECTRE-Tri: Probabilistic ELECTRE-Tri Method—Application for the Energy Renovation of Buildings. Energies, 16(14), 5296. https://doi.org/10.3390/en16145296 
 
 
-
-
-
-
-
-
----
 
 _This file was generated via [lazydocs](https://github.com/ml-tooling/lazydocs)._

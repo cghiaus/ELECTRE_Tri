@@ -5,8 +5,8 @@ Created on Mon Nov 25 18:09:13 2024
 
 @author: cghiaus
 
-pELECTRE Tri (probabilistic ELECTRE Tri)
-with 4 default base profiles for 5 categories.
+ELECTRE Tri-B
+with 4 explicitely defined base profiles (for 5 categories).
 """
 
 import electre_tri as et

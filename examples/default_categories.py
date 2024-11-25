@@ -10,7 +10,7 @@ ELECTRE Tri with 4 default base profiles for 5 categories.
 
 import pandas as pd
 
-import ELECTRE_Tri_B as et
+import electre_tri as et
 
 data_file = '../data/default_categories.csv'
 print("Example of data file")
@@ -20,8 +20,8 @@ A, L, w = et.read_electre_tri_extreme_base_profile(data_file)
 B = et.base_profile(L)
 T = et.threshold(B)
 
-opti, pessi = et.ELECTRE_Tri(A, B, T, w,
-                             credibility_threshold=0.7)
+opti, pessi = et.electre_tri_b(A, B, T, w,
+                               credibility_threshold=0.7)
 print("\nOptimistic ranking:")
 print(opti)
 

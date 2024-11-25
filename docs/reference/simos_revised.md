@@ -72,10 +72,10 @@ Simos method for weights of criteria made by classification of cards.
  
  - <b>`df`</b> (DataFrame):  2 columns: Criteria, Weight. 
 
-**Bibliograpy** 
+**References** 
+Figueira, J., Roy, B. (2002). Determining the weights of criteria in the ELECTRE type methods with a revised Simos' procedure. European journal of operational research, 139(2), 317-326. https//doi.org/10.1016/S0377-2217(01)00370-8 
 
-1. Papathanasiou, J., Ploskas, N. (2018). Multiple criteria decision aid. Methods, Examples and Python Implementations. p. 165:  Revised Simos. https//doi.org/10.1007/978-3-319-91648-4 
+Papathanasiou, J., Ploskas, N. (2018). Multiple criteria decision aid. Methods, Examples and Python Implementations. p. 165:  Revised Simos. https//doi.org/10.1007/978-3-319-91648-4 
 
-2. Figueira, J., Roy, B. (2002). Determining the weights of criteria in the ELECTRE type methods with a revised Simos' procedure. European journal of operational research, 139(2), 317-326. https//doi.org/10.1016/S0377-2217(01)00370-8 
 
 _This file was generated via [lazydocs](https://github.com/ml-tooling/lazydocs)._

@@ -9,9 +9,9 @@ Last modified on Tue Oct 29 10:39:45 2024
 
 ELECTRE Tri-B module
 
-In ELECTRE Tri-B each category is characterized by two reference profiles corresponding to the limits of this category. In contrast, in ELECTRE Tri-C each category is characterized by one reference profile only, being representative of the category [Corente et al; 2016].
+In ELECTRE Tri-B, each category is characterized by two reference profiles corresponding to the limits of this category. In contrast, in ELECTRE Tri-C each category is characterized by one reference profile only, being representative of the category ([Corente et al. 2016](https://doi.org/10.1016/j.ejor.2015.12.053)).
 
-The functions in `electre_tri.py` (in folder `src`) are organized following, approximately, the workflow.
+The functions of module `electre_tri.py` (in folder `src`) are organized following, approximately, the workflow.
 
 ---
 
@@ -897,6 +897,63 @@ w,   ,                                            0.7,  0.3
 
 ---
 
+
+## <kbd>function</kbd> `pelectre_tri_b`
+
+```python
+pelectre_tri_b(A, S, B, T, w, credibility_threshold, n_simulations=10000)
+```
+
+pETECTRE Tri-B: probabilistic ELECTRE Tri-B 
+
+ Monte Carlo simulation of the ELECTRE Tri-B method with  normally distributed performance values.` 
+
+ Steps: 
+        - Generate random samples from normal distributions for each value  in the performance matrix A. 
+        - Run the ELECTRE Tri-B method on each sample of A. 
+        - Aggregate the results to get probabilities of assignment  to each category 
+
+` 
+
+**Args:**
+ 
+     - <b>`A`</b> (DataFrame):  Matrix of performance of alternatives (on rows) for criteria (on columns). Multiply by -1 for citeria to be minimised. 
+
+
+     - <b>`S`</b> (DataFrame):  Matrix with standard deviations of each value of the performance matrix A. 
+
+
+     - <b>`B`</b> (DataFrame):  Matrix of base profiles organized in ascending order. Base profiles are on rows and criteria on columns. Multiply by -1 for citeria to be minimised. 
+
+
+     - <b>`T`</b> (DataFrame):  Matrix of thresholds: 
+            - q : indifference, 
+            - p : preference, 
+            - v  :veto. The thresholds are for each criterion. Do not multiply by -1 for citeria to be minimised. 
+
+
+     - <b>`w`</b> (DataFrame):  Vector of weights for each criterion. Do not multiply by -1 for citeria to be minimised. 
+
+
+     - <b>`credibility_threshold`</b> (float):  Thershold between 0.5 and 1 (typically 0.75) to be used for the credibility of outranking. 
+
+
+     - <b>`n_simulations`</b> (int, optional):  Number of simulations. Defaults to 10000. 
+
+
+
+**Returns:**
+ 
+     - <b>`p_opti`</b> (DataFrame):  Optimistic ranking DataFrame with index for categories and columns for alternatives. Values are NaN or 1. Value 1 indicates the category in which is an alternative. There is only one value of 1 per row and per colum, i.e. an alternative belongs to one and only one category. 
+
+
+     - <b>`p_pessi`</b> (DataFrame):  Pessimistic ranking DataFrame with index for categories and columns for alternatives. Values are NaN or 1. Value 1 indicates the category in which is an alternative. There is only one value of 1 per row and per colum, i.e. an alternative belongs to one and only one category. 
+
+
+
+
+---
+
 ## <kbd>function</kbd> `plot_alternatives_vs_base_profile`
 
 ```python
@@ -967,24 +1024,20 @@ plot_base_profiles_vs_alternative(B, A.iloc[0], T)
 ---
 
 
-# Bibliography
+# References
 
-Almeida-Dias, J., Figueira, J. R., & Roy, B. (2010). Electre Tri-C: A multiple criteria sorting method based on characteristic reference actions. European Journal of Operational Research, 204(3), 565-580. https://doi.org/10.1016/j.ejor.2009.10.018 https://hal.science/hal-00907583v1/document 
+Almeida-Dias, J., Figueira, J. R., Roy, B. (2010). Electre Tri-C: A multiple criteria sorting method based on characteristic reference actions. European Journal of Operational Research, 204(3), 565-580. https://doi.org/10.1016/j.ejor.2009.10.018 https://hal.science/hal-00907583v1/document 
 
-Mousseau, V., Slowinski, R., & Zielniewicz, P. (1999). ELECTRE TRI 2.0 Methodological guide and user’s manual. Universite Paris Dauphine, Document du LAMSADE, 111, 263-275. https://www.lamsade.dauphine.fr/mcda/biblio/PDF/mous3docl99.pdf 
+Almeida-Dias, J., Figueira, J. R., Roy, B. (2010) A multiple criteria sorting method defining each category by several characteristic reference actions: The Electre Tri-nC method, Cahier du LAMSADE 294, Université Paris Daufine, CNRS https://hal.science/hal-01511223/document 
 
-Mousseau, V., Slowinski, R., & Zielniewicz, P. (2000). A user-oriented implementation of the ELECTRE-TRI method integrating preference elicitation support. Computers & operations research, 27(7-8), 757-777. https://doi.org/10.1016/S0305-0548(99)00117-3 https://www.lamsade.dauphine.fr/mcda/biblio/PDF/mous3cor00.pdf 
-
-J. Almeida-Dias , J. R. Figueira , B. Roy (2010) A multiple criteria sorting method defining each category by several characteristic reference actions: The Electre Tri-nC method, Cahier du LAMSADE 294, Université Paris Daufine, CNRS https://hal.science/hal-01511223/document 
+Baseer, M., Ghiaus, C., Viala, R., Gauthier, N., & Daniel, S. (2023). pELECTRE-Tri: Probabilistic ELECTRE-Tri Method—Application for the Energy Renovation of Buildings. Energies, 16(14), 5296. https://doi.org/10.3390/en16145296 
 
 Corrente, S., Greco, S., & Słowiński, R. (2016). Multiple criteria hierarchy process for ELECTRE Tri methods. European Journal of Operational Research, 252(1), 191-203. https://doi.org/10.1016/j.ejor.2015.12.053 https://pure.port.ac.uk/ws/portalfiles/portal/5001301/GRECO_Multiple_Criteria_Hierarchy_Process_for_ELECTRE_Tri_methods_Postprint.pdf 
 
 Figueira, J. R., Mousseau, V., & Roy, B. (2016). ELECTRE methods. Multiple criteria decision analysis: State of the art surveys, 155-185. https://www.lamsade.dauphine.fr/mcda/biblio/PDF/JFVMBR2005.pdf 
 
-Corrente, S., Greco, S., & Słowiński, R. (2016). Multiple criteria hierarchy process for ELECTRE Tri methods. European Journal of Operational Research, 252(1), 191-203. https://doi.org/10.1016/j.ejor.2015.12.053 https://pure.port.ac.uk/ws/portalfiles/portal/5001301/GRECO_Multiple_Criteria_Hierarchy_Process_for_ELECTRE_Tri_methods_Postprint.pdf 
+Mousseau, V., Slowinski, R., & Zielniewicz, P. (1999). ELECTRE TRI 2.0 Methodological guide and user’s manual. Universite Paris Dauphine, Document du LAMSADE, 111, 263-275. https://www.lamsade.dauphine.fr/mcda/biblio/PDF/mous3docl99.pdf 
 
-Baseer, M., Ghiaus, C., Viala, R., Gauthier, N., & Daniel, S. (2023). pELECTRE-Tri: Probabilistic ELECTRE-Tri Method—Application for the Energy Renovation of Buildings. Energies, 16(14), 5296. https://doi.org/10.3390/en16145296 
-
-
+Mousseau, V., Slowinski, R., & Zielniewicz, P. (2000). A user-oriented implementation of the ELECTRE-TRI method integrating preference elicitation support. Computers & operations research, 27(7-8), 757-777. https://doi.org/10.1016/S0305-0548(99)00117-3 https://www.lamsade.dauphine.fr/mcda/biblio/PDF/mous3cor00.pdf 
 
 _This file was generated via [lazydocs](https://github.com/ml-tooling/lazydocs)._

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Oct 11 19:24:18 2024
-Last modified on Sat Nov  9 09:50:08 2024
+Last modified on Sun Nov 17 08:00:13 2024
 
 @author: cghiaus
 
@@ -132,6 +132,83 @@ def read_electre_tri_data(filename):
     w.name = None  # Remove the name from the Series
 
     return A, B, T, w
+
+
+def read_pelectre_tri_data(filename):
+    """Reads the data of the pELECTRE Tri problem.
+
+    Args:
+        filename (str): Name of .csv file containing the data of the problem.
+
+    Returns:
+        A (DataFrame): Performance matrix of alternatives (rows) for
+        criteria (columns).
+
+        S (DataFrame): Standard deviation of performance matrix
+        of alternatives (rows) for criteria (columns).
+
+        B (DataFrame): Base profiles in ascending order for criteria (columns).
+
+        T (DataFrame): Indifference (q), preference (p) and veto (v) thresholds
+        for each criterion (column).
+
+        w (Series): Weight for each criterion.
+
+    Example
+    -------
+
+    >>> data_file = './data/simple_example_std.csv'
+    >>> A, S, B, T, w = read_pelectre_tri_data(data_file)
+    >>> ...
+
+    where `simple_example.csv` is:
+
+
+    .. code-block:: none
+
+        type, profile, c1, c2
+        A,    a1,     8.5, 18
+        A,    a2,      14, 16
+        A,    a3,       5, 27
+        S,    a1,    0.85, 1.8
+        S,    a2,     1.4, 1.6
+        S,    a3,     0.5, 2.7
+        B,    b1,      10, 15
+        B,    b2,      15, 20
+        T,     q,       1, 2
+        T,     p,       2, 4
+        T,     v,       4, 8
+        w,      ,     0.7, 0.3
+    """
+
+    # Read the CSV file
+    df = pd.read_csv(filename, header=0)
+
+    # Extract A
+    A = df[df.iloc[:, 0] == 'A'].iloc[:, 2:].set_index(
+        df[df.iloc[:, 0] == 'A'].iloc[:, 1])
+    A.index.name = None
+
+    # Extract V
+    S = df[df.iloc[:, 0] == 'S'].iloc[:, 2:].set_index(
+        df[df.iloc[:, 0] == 'S'].iloc[:, 1])
+    S.index.name = None
+
+    # Extract B
+    B = df[df.iloc[:, 0] == 'B'].iloc[:, 2:].set_index(
+        df[df.iloc[:, 0] == 'B'].iloc[:, 1])
+    B.index.name = None
+
+    # Extract T
+    T = df[df.iloc[:, 0] == 'T'].iloc[:, 2:].set_index(
+        df[df.iloc[:, 0] == 'T'].iloc[:, 1])
+    T.index.name = None
+
+    # Extract w
+    w = pd.Series(df[df.iloc[:, 0] == 'w'].iloc[0, 2:].dropna())
+    w.name = None  # Remove the name from the Series
+
+    return A, S, B, T, w
 
 
 def read_electre_tri_extreme_base_profile(filename):
@@ -1458,7 +1535,7 @@ def electre_tri_equidistant_profiles(
         - base profiles, B
         - theresholds, T
 
-    Perform: electre_tri(A, B, T, w, credibility_threshold)
+    Perform: electre_tri_b(A, B, T, w, credibility_threshold)
 
     Args:
         data_file (str): Name of .csv file containing the data of the problem
@@ -1525,6 +1602,101 @@ def electre_tri_equidistant_profiles(
                                             credibility_threshold)
 
     return optimistic, pessimistic
+
+
+def pelectre_tri_b(A, S, B, T, w,
+                   credibility_threshold,
+                   n_simulations=10000):
+    """pETECTRE Tri-B: probabilistic ELECTRE Tri-B
+
+    Monte Carlo simulation of the ELECTRE Tri-B method with
+    normally distributed performance values.`
+
+    Steps:
+        - Generate random samples from normal distributions for each value
+        in the performance matrix A.
+        - Run the ELECTRE Tri-B method on each sample of A.
+        - Aggregate the results to get probabilities of assignment
+        to each category
+
+`
+    Args:
+        A (DataFrame): Matrix of performance of alternatives (on rows)
+        for criteria (on columns).
+        Multiply by -1 for citeria to be minimised.
+
+        S (DataFrame): Matrix with standard deviations of each value of
+        the performance matrix A.
+
+        B (DataFrame): Matrix of base profiles organized in ascending order.
+        Base profiles are on rows and criteria on columns.
+        Multiply by -1 for citeria to be minimised.
+
+        T (DataFrame): Matrix of thresholds:
+            - q : indifference,
+            - p : preference,
+            - v  :veto.
+        The thresholds are for each criterion.
+        Do not multiply by -1 for citeria to be minimised.
+
+        w (DataFrame): Vector of weights for each criterion.
+        Do not multiply by -1 for citeria to be minimised.
+
+        credibility_threshold (float): Thershold between 0.5 and 1
+        (typically 0.75) to be used for the credibility of outranking.
+
+        n_simulations (int, optional): Number of simulations.
+        Defaults to 10000.
+
+    Returns:
+        p_opti (DataFrame): Optimistic ranking DataFrame with
+        index for categories and columns for alternatives.
+        Values are NaN or 1. Value 1 indicates the category in which is an
+        alternative. There is only one value of 1 per row and per colum, i.e.
+        an alternative belongs to one and only one category.
+
+        p_pessi (DataFrame): Pessimistic ranking DataFrame with
+        index for categories and columns for alternatives.
+        Values are NaN or 1. Value 1 indicates the category in which is an
+        alternative. There is only one value of 1 per row and per colum, i.e.
+        an alternative belongs to one and only one category.
+
+    """
+    opti, pessi = electre_tri_b(A, B, T, w,
+                                credibility_threshold=0.7)
+
+    # Initialize result dataframe
+    p_opti = pd.DataFrame(0, index=opti.index, columns=opti.columns)
+    p_pessi = pd.DataFrame(0, index=pessi.index, columns=pessi.columns)
+
+    # Set up random number generator
+    rng = np.random.default_rng()
+
+    # Create sample_A once, outside the loop
+    sample_A = pd.DataFrame(index=A.index, columns=A.columns)
+
+    for _ in range(n_simulations):
+        # Generate new random values for sample_A
+        sample_A[:] = A + rng.normal(loc=0, scale=S)
+
+        # Run ELECTRE Tri-B on the sample
+        opti, pessi = electre_tri_b(sample_A,
+                                    B, T, w,
+                                    credibility_threshold)
+
+        # Aggregate results
+        p_opti += opti.fillna(0)
+        p_pessi += pessi.fillna(0)
+
+    # Convert counts to probabilities
+    p_opti /= n_simulations
+    p_pessi /= n_simulations
+
+    # Replace zero probabilities with NaN for better readability
+    p_opti = p_opti.replace(0, np.nan)
+    p_pessi = p_pessi.replace(0, np.nan)
+
+    return p_opti, p_pessi
 
 
 def plot_alternatives_vs_base_profile(A, B_row, T):
@@ -1673,8 +1845,9 @@ def plot_base_profiles_vs_alternative(B, A_row, T):
 def main():
     folder = '../data/'
     # file = 'isfaki_T10_1_T10_13.csv'
-    file = 'simple_example.csv'
     # file = 'mous3docl99_2.csv'
+    file = 'simple_example.csv'
+    file_std = 'simple_example_std.csv'
     data_file = folder + file
 
     A, B, T, w = read_electre_tri_data(data_file)
@@ -1790,6 +1963,25 @@ def main():
 
     print('\nPessimistic sorting')
     print(sort(pessi).to_frame(name="alternatives").rename_axis("categories"))
+
+    """
+    pELECTRE Tri
+    """
+    data_file = folder + file_std
+
+    A, S, B, T, w = read_pelectre_tri_data(data_file)
+    credibility_threshold = 0.7
+
+    p_opti, p_pessi = pelectre_tri_b(
+        A, S, B, T, w,
+        credibility_threshold,
+        n_simulations=10)
+
+    print("\nProbabilistic optimistic ranking:")
+    print(p_opti)
+
+    print("\nProbabilistic pessimistic ranking:")
+    print(p_pessi)
 
 
 if __name__ == "__main__":

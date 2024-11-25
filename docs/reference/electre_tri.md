@@ -904,9 +904,9 @@ w,   ,                                            0.7,  0.3
 pelectre_tri_b(A, S, B, T, w, credibility_threshold, n_simulations=10000)
 ```
 
-pETECTRE Tri-B: probabilistic ELECTRE Tri-B 
+pELECTRE Tri-B: probabilistic ELECTRE Tri-B 
 
- Monte Carlo simulation of the ELECTRE Tri-B method with  normally distributed performance values.` 
+ Monte Carlo simulation of ELECTRE Tri-B method with  normally distributed values in performance matrix.` 
 
  Steps: 
         - Generate random samples from normal distributions for each value  in the performance matrix A. 

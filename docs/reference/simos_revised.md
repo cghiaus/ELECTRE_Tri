@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-# <kbd>module</kbd> `Simos_revised.py`
+# module `Simos_revised.py`
 Created on Thu Dec 16 20:56:04 2021 
 
 Last updated on Fri Nov  8 12:37:14 2024
@@ -49,7 +49,7 @@ from Figueira, J., Roy, B. (2002) Table 1 page 319 12 criteria {A, b, c, d, f, g
 
 ---
 
-## <kbd>function</kbd> `criteria_weights_Simos`
+## function `criteria_weights_Simos`
 
 ```python
 criteria_weights_Simos(set_cards_file: str, z: float)

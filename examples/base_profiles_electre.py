@@ -12,7 +12,7 @@ with 4 explicitely defined base profiles (for 5 categories).
 import electre_tri as et
 
 folder = '../data/'
-file = 'simple_example.csv'
+file = 'base_profile.csv'
 data_file = folder + file
 
 A, B, T, w = et.read_electre_tri_data(data_file)

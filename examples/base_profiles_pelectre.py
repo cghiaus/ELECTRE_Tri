@@ -14,7 +14,7 @@ The standard deviation of the values of performance matrix are in `S`.
 import electre_tri as et
 
 folder = '../data/'
-file_std = 'simple_example_std.csv'
+file_std = 'base_profile_std.csv'
 data_file = folder + file_std
 
 A, S, B, T, w = et.read_pelectre_tri_data(data_file)

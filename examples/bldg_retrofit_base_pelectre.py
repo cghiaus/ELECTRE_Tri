@@ -56,16 +56,16 @@ from src import electre_tri as et
 
 # Problem statement
 data_file = "../data/bldg_retrofit_base_std.csv"
-credibility_threshold = 0.7
 
 # Problem solving
 A, S, B, T, w = et.read_pelectre_tri_data(data_file)
 
 p_opti, p_pessi = et.pelectre_tri_b(
     A, S, B, T, w,
-    credibility_threshold,
+    credibility_threshold=0.7,
     n_simulations=100)
 
+# Results
 print("\nProbabilistic optimistic ranking:")
 print(p_opti)
 

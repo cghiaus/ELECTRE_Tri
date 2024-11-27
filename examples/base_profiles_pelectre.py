@@ -23,7 +23,7 @@ credibility_threshold = 0.7
 p_opti, p_pessi = et.pelectre_tri_b(
     A, S, B, T, w,
     credibility_threshold,
-    n_simulations=10)
+    n_simulations=100)
 
 print("\nProbabilistic optimistic ranking:")
 print(p_opti)

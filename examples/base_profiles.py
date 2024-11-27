@@ -24,7 +24,7 @@ opti, pessi = et.electre_tri_b(A, B, T, w,
 
 # Results
 print("\nProbabilistic optimistic ranking:")
-print(opti)
+print(opti.to_string(na_rep='0'))
 
 print("\nProbabilistic pessimistic ranking:")
-print(pessi)
+print(pessi.to_string(na_rep='0'))

@@ -21,7 +21,6 @@ credibility_threshold = 0.7
 
 # Problem solving
 A, S, B, T, w = et.read_pelectre_tri_data(data_file)
-credibility_threshold = 0.7
 
 p_opti, p_pessi = et.pelectre_tri_b(
     A, S, B, T, w,

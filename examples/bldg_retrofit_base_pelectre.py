@@ -67,7 +67,7 @@ p_opti, p_pessi = et.pelectre_tri_b(
 
 # Results
 print("\nProbabilistic optimistic ranking:")
-print(p_opti)
+print(p_opti.to_string(na_rep='0'))
 
 print("\nProbabilistic pessimistic ranking:")
-print(p_pessi)
+print(p_pessi.to_string(na_rep='0'))

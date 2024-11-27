@@ -13,10 +13,12 @@ The standard deviation of the values of performance matrix are in `S`.
 
 import electre_tri as et
 
-folder = '../data/'
-file_std = 'base_profile_std.csv'
-data_file = folder + file_std
 
+# Problem statement
+data_file = "../data/base_profile_std.csv"
+credibility_threshold = 0.7
+
+# Problem solving
 A, S, B, T, w = et.read_pelectre_tri_data(data_file)
 credibility_threshold = 0.7
 
@@ -25,6 +27,7 @@ p_opti, p_pessi = et.pelectre_tri_b(
     credibility_threshold,
     n_simulations=100)
 
+# Results
 print("\nProbabilistic optimistic ranking:")
 print(p_opti)
 

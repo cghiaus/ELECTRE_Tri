@@ -5,8 +5,9 @@ Created on Mon Nov 25 18:09:13 2024
 
 @author: cghiaus
 
-pELECTRE Tri-B (probabilistic ELECTRE Tri-B)
-with 4 explicitely defined base profiles for 5 categories.
+pELECTRE Tri-B (probabilistic ELECTRE Tri-B):
+    - 3 alternatives, 2 criteria
+    - 2 explicitely defined base profiles (for 3 categories).
 The standard deviation of the values of performance matrix are in `S`.
 
 """

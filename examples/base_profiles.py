@@ -5,8 +5,9 @@ Created on Mon Nov 25 18:09:13 2024
 
 @author: cghiaus
 
-ELECTRE Tri-B
-with 4 explicitely defined base profiles (for 5 categories).
+ELECTRE Tri-B:
+    - 3 alternatives, 2 criteria
+    - 2 explicitely defined base profiles (for 3 categories).
 """
 
 import electre_tri as et

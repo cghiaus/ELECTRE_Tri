@@ -1,6 +1,8 @@
 # ELECTRE Tri-B documentation: tutorials
 
-by Christian Ghiaus (Researcher ID: [ORCID](https://orcid.org/0000-0001-5561-1245), [SciProfiles](https://sciprofiles.com/profile/2970335), [Scopus](https://www.scopus.com/authid/detail.uri?authorId=6603390490), [Web of Science](https://www.webofscience.com/wos/author/record/1651371), [HAL](https://cv.hal.science/cghiaus))
+by Christian Ghiaus 
+
+Researcher ID: [ORCID](https://orcid.org/0000-0001-5561-1245), [SciProfiles](https://sciprofiles.com/profile/2970335), [Scopus](https://www.scopus.com/authid/detail.uri?authorId=6603390490), [Web of Science](https://www.webofscience.com/wos/author/record/1651371), [HAL](https://cv.hal.science/cghiaus)
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cghiaus/ELECTRE_Tri/HEAD)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/cghiaus/dm4bem_book/blob/main/LICENSE)
@@ -10,6 +12,8 @@ by Christian Ghiaus (Researcher ID: [ORCID](https://orcid.org/0000-0001-5561-124
 > Figure 1. Tutorial type of documentation (adapted after [Procida 2017](https://diataxis.fr)).
 
 __Tutorials__ are structured _learning_ experiences through a series of guided steps to solve a meaningful problem. Users actively engage with the material (_action_) aimed at helping them gain new knowledge and skills (_acquisition_).
+
+__Tutorials__ are _learning_ oriented. They are structured experiences that serve to  through guided steps,
 
 __Contents__
 

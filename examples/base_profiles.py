@@ -23,8 +23,8 @@ opti, pessi = et.electre_tri_b(A, B, T, w,
                                credibility_threshold)
 
 # Results
-print("\nProbabilistic optimistic ranking:")
+print("\nOptimistic ranking:")
 print(opti.to_string(na_rep='0'))
 
-print("\nProbabilistic pessimistic ranking:")
+print("\nPessimistic ranking:")
 print(pessi.to_string(na_rep='0'))

@@ -11,8 +11,8 @@ The standard deviation of the values of performance matrix are in `S`.
 
 
 `base_profiles.py`: Example of ELECTRE Tri-B:
-    - 3 alternatives, 2 criteria
-    - 2 explicitely defined base profiles (for 3 categories).
+- 3 alternatives, 2 criteria
+- 2 explicitely defined base profiles (for 3 categories).
 > See: docs/tutorials/base_profile.ipynb
 
 `bldg_retrofit_base_pelectre.py`: Energy retrofit of a building with probabilistic values of performance marix. Find the membership of the three alternatives to the three catégories defined by base profiles.

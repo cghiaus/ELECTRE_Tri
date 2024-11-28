@@ -1723,7 +1723,8 @@ def plot_alternatives_vs_base_profile(A, B_row, T):
     """
 
     # Create a new figure
-    plt.figure(figsize=(12, 7))
+    # plt.figure(figsize=(12, 7))
+    plt.figure(figsize=(10, 6))
 
     # Plot lines for each alternative in A
     for idx, row in A.iterrows():
@@ -1793,7 +1794,8 @@ def plot_base_profiles_vs_alternative(B, A_row, T):
     """
 
     # Create a new figure
-    plt.figure(figsize=(12, 7))
+    # plt.figure(figsize=(12, 7))
+    plt.figure(figsize=(10, 6))
 
     # Plot lines for each alternative in A
     for idx, row in B.iterrows():

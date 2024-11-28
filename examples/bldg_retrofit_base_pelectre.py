@@ -5,7 +5,7 @@ Created on Mon Nov 11 11:11:11 2024
 
 @author: cghiaus
 
-ELECTRE Tri-B with specified base profiles.
+Probabilistic pELECTRE Tri-B with specified base profiles.
 
 Energy retrofit of a building.
 
@@ -21,6 +21,11 @@ Given:
         - a1: Basic renovation,
         - a2: Moderate renovation,
         - a3: Extensive renovation.
+
+    Standard deviatiions for the values of performance matrix:
+        - s1: Basic renovation for all criteria,
+        - s2: Moderate renovation for all criteria,
+        - s3: Extensive renovation for all criteria.
 
     Base profiles:
         - b1: bad

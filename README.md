@@ -11,6 +11,17 @@ ELECTRE Tri-B is a Multiple-Criteria Decision-Making ([MCDM](https://en.m.wikipe
 
 This repository contains a framework and a Python 3.11.7 implementation of ELECTRE Tri-B and of Simos' method for determining the weights of criteria, along with documentation and examples.
 
+## Installation
+
+This software requires no installation. Simply copy the module files to your desired location.
+
+For remote execution without any local setup, you can run this repository on MyBinder.org:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cghiaus/ELECTRE_Tri/HEAD)
+
+Click the "Launch Binder" badge above to open the repository in a Jupyter environment. This allows you to interact with the software directly in your web browser (with no local installation).
+
+
 ## Contents
 
 ```

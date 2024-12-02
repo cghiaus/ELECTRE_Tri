@@ -1606,7 +1606,8 @@ def electre_tri_equidistant_profiles(
 
 def pelectre_tri_b(A, S, B, T, w,
                    credibility_threshold,
-                   n_simulations=10000):
+                   n_simulations=100,
+                   seed=123):
     """pETECTRE Tri-B: probabilistic ELECTRE Tri-B
 
     Monte Carlo simulation of the ELECTRE Tri-B method with
@@ -1646,7 +1647,11 @@ def pelectre_tri_b(A, S, B, T, w,
         (typically 0.75) to be used for the credibility of outranking.
 
         n_simulations (int, optional): Number of simulations.
-        Defaults to 10000.
+        Default to 10000.
+
+        seed (int, optonal): Seed for the reproducibility of random number
+        generator. Use `seed=None` for truely random numbers.
+        Default to 123.
 
     Returns:
         p_opti (DataFrame): Optimistic ranking DataFrame with
@@ -1670,7 +1675,7 @@ def pelectre_tri_b(A, S, B, T, w,
     p_pessi = pd.DataFrame(0, index=pessi.index, columns=pessi.columns)
 
     # Set up random number generator
-    rng = np.random.default_rng()
+    rng = np.random.default_rng(seed)
 
     # Create sample_A once, outside the loop
     sample_A = pd.DataFrame(index=A.index, columns=A.columns)
@@ -1723,7 +1728,8 @@ def plot_alternatives_vs_base_profile(A, B_row, T):
     """
 
     # Create a new figure
-    plt.figure(figsize=(12, 7))
+    # plt.figure(figsize=(12, 7))
+    plt.figure(figsize=(10, 6))
 
     # Plot lines for each alternative in A
     for idx, row in A.iterrows():
@@ -1793,7 +1799,8 @@ def plot_base_profiles_vs_alternative(B, A_row, T):
     """
 
     # Create a new figure
-    plt.figure(figsize=(12, 7))
+    # plt.figure(figsize=(12, 7))
+    plt.figure(figsize=(10, 6))
 
     # Plot lines for each alternative in A
     for idx, row in B.iterrows():

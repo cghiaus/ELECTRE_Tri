@@ -45,19 +45,7 @@ See:
     - docs/explanation/electre_tri-b_explained.ipynb
 """
 
-import sys
-import os
-
-# Get the path to the parent directory /../..
-parent_dir = os.path.dirname(           # dir of dir of file
-    os.path.dirname(                    # directory of current file
-        os.path.abspath(__file__)))     # absolute path to current file
-
-# Add the parent directory to sys.path
-sys.path.append(parent_dir)
-
-from src import electre_tri as et
-
+import electre_tri as et
 
 # Problem statement
 data_file = "../data/bldg_retrofit_base_std.csv"

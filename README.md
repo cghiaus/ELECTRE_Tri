@@ -9,7 +9,7 @@ Researcher ID: [ORCID](https://orcid.org/0000-0001-5561-1245), [SciProfiles](htt
 
 ELECTRE Tri-B is a Multiple-Criteria Decision-Making ([MCDM](https://en.m.wikipedia.org/wiki/Multiple-criteria_decision_analysis)) method for sorting alternatives into predefined categories defined by lower and upper boundaries. 
 
-This repository contains a Python 3.11.7 implementation of ELECTRE Tri-B and of Simos' method for determining the weights of criteria, along with explanations and examples.
+This repository contains a framework and a Python 3.11.7 implementation of ELECTRE Tri-B and of Simos' method for determining the weights of criteria, along with documentation and examples.
 
 ## Contents
 
@@ -56,3 +56,5 @@ ELECTRE_Tri-main
 1. Launch binder.
 2. Upload your data file (which describes the ELECTRE Tri or the weighing problem) in `/data` folder.
 3. Modify and run the scripts from `/examples` to get the results.
+
+Read the documentation from `/docs`.

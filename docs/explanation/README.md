@@ -13,11 +13,13 @@ Researcher ID: [ORCID](https://orcid.org/0000-0001-5561-1245), [SciProfiles](htt
 __Explanation__ is _understanding_ oriented.
 The concepts are explained (_cognition_) in order to gain new insights and knowledge (_acquisition_) ([Procida 2017](https://diataxis.fr)).
 
-__Explanations__ are _understanding_ oriented.
+__Contents__:
 
-The explanations are given for: 
-- ELECTRE Tri-B multiple-criteria decision-making (MCDM) method.
-- Simos' revised method for finding the weights of the criteria.
+- `electre_tri-b_explained.ipynb`: Explanation of ELECTRE Tri-B multiple-criteria decision-making (MCDM) method.
+  
+- `pelectre_tri-b_explained.ipynb`: Explanation of probabilistic pELECTRE Tri-B multiple-criteria decision-making (MCDM) method.
+
+- `simos_revised_explained.ipynb`: Explanation of Simos' revised method for finding the weights of the criteria.
 
 # Bibliography
 Procida, D. (2017). Diátaxis documentation framework. URL https://diataxis.fr.

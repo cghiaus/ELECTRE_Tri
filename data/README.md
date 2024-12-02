@@ -7,6 +7,17 @@
 
 ## Files for ELECTRE Tri-B method
 *****
+
+- `base_profile.csv` and `base_profile_std.csv`:
+  3-alternatives, 2-criteria decision matrix, 2-base profiles for ELECTRE Tri and pELECTRE Tri, respectiely.
+*****
+
+- `bldg_retrofit_base.csv` and `bldg_retrofit_base_std.csv`: 3-alternatives, 2-criteria decision matrix, 2-base profiles for ELECTRE Tri and pELECTRE Tri, respectiely, applied to building energy retrofit. Note the negative values for criteria to be minimized.
+*****
+
+- `bldg_retrofit_level.csv`: same as for `bldg_retrofit_base.csv` but with the definition of categories as a number of equal ranges between the lowest possible and the highest possible level. Note the negative values for criteria to be minimized.
+*****
+  
 - `default_categories.csv`:
   Data file for default parameters (base profiles and thresholds).
 *****
@@ -43,8 +54,4 @@
 
 - `performance_matrix.csv`:  
    2 criteria, 3 alternatives (no base profiles)
-*****
-
-- `simple_example.csv`:  
-   2 criteria, 3 alternatives, 2 base profiles
 *****

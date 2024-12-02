@@ -12,12 +12,11 @@ Researcher ID: [ORCID](https://orcid.org/0000-0001-5561-1245), [SciProfiles](htt
 
 __Reference__ offers detailed technical _information_ on functions from Python modules in an orderly way. Users can look for information (_cognition_) in order to apply it to their existing projects (_application_). ([Procida 2017](https://diataxis.fr)).
 
-__References__ are information-oriented.
+__Contents:__
 
+- `electre_tri.md`: Reference manual of Python modules `/src/electre_tri.py` on ELECTRE Tri method.
 
-Reference of the functions of Python modules: 
-- `/src/electre_tri.py`.
-- `/src/simos_revised.py`.
+- `simos_revised.md`: Reference manual of Python modules `/src/simos_revised.py` on Simos' method for determining the weights of criteria.
 
 # Bibliography
 Procida, D. (2017). Diátaxis documentation framework. URL https://diataxis.fr.

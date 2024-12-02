@@ -1,25 +1,21 @@
 # Examples of ELECTRE Tri-B
 
+Examples of applications implemented in Python scripts. The examples assume that the module `electre_tri.py` is in the curent folder and that the data files are in the folder `../data/`.
+
 __Contents__
 
-`base_profiles_pelectre.py`: Example of pELECTRE Tri-B (probabilistic ELECTRE Tri-B):
-- 3 alternatives, 2 criteria
-- 2 explicitely defined base profiles (for 3 categories).
-    
-The standard deviation of the values of performance matrix are in `S`.
-> See: docs/tutorials/base_profile_pelectre.ipynb
+- `base_profiles.py` and `base_profiles_pelectre.py`: Examples of ELECTRE Tri-B and pELECTRE Tri-B analysis, respectively, with 3-alternatives, 2-criteria decision matrix, 2-base profiles.
+> - See: ../docs/tutorials/base_profile.ipynb
+> - See: ../docs/tutorials/base_profile_pelectre.ipynb
 
+- `bldg_retrofit_base.py` and `bldg_retrofit_base_pelectre.py`: Examples of ELECTRE Tri-B and pELECTRE Tri-B analysis, respectively, of energy retrofit of a building. Classify three alternatives into three categories defined by base profiles.
+> - See: ../docs/tutorials/bldg_retrofit_base.ipynb
+> - See: ../docs/tutorials/bldg_retrofit_base_pelectre.ipynb
 
-`base_profiles.py`: Example of ELECTRE Tri-B:
-- 3 alternatives, 2 criteria
-- 2 explicitely defined base profiles (for 3 categories).
-> See: docs/tutorials/base_profile.ipynb
+- `bldg_retrofit_level.py`: Example of ELECTRE Tri-B applied to energy retrofit of a building. Sort three alternatives in three equidistant categories obtained from extreme (i.e., worst and best) profile levels. 
+> - See: ../docs/tutorials/bldg_retrofit_level.ipynb
 
-`bldg_retrofit_base_pelectre.py`: Energy retrofit of a building with probabilistic values of performance marix. Find the membership of the three alternatives to the three catégories defined by base profiles.
-> See: docs/tutorials/bldg_retrofit_base.ipynb
+- `extrm_levels_electre.py`: Example of ELECTRE Tri-B analysis with extreme profile levels.
+*****
 
-`bldg_retrofit_base.py`: Energy retrofit of a building. Sort three alternatives in three catégories defined by base profiles.
-> See: docs/tutorials/bldg_retrofit_base.ipynb
-
-`bldg_retrofit_level.py`: Energy retrofit of a building. Sort three alternatives in three equidistant categories obtained from extreme (i.e., worst and best) levels. 
-> See: docs/tutorials/bldg_retrofit_level.ipynb
+- `electre_tri.py`: ELECTRE Tri module (copy of `../src/electre_tri.py`). Used to simply `ìmport` of module `electre_tri.py`.

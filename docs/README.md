@@ -12,8 +12,8 @@ Researcher ID: [ORCID](https://orcid.org/0000-0001-5561-1245), [SciProfiles](htt
 > Figure 1. Forms of documentation (adapted after [Procida 2017](https://diataxis.fr)).
 
 Documentation is organized according to Diátaxis framework ([Procida 2017](https://diataxis.fr)). The four types of documentation are positioned along two axes that represent different aspects of the user's needs and interaction with the content:
-- cognition vs. action;
-- acquisition vs. application.
+- _cognition_ (theoretical knowledge) vs. _action_ (practical knowledge);
+- _acquisition_ (study) vs. _application_ (work).
 
 These axes create four quadrants that define the characteristics of each documentation type (Figure 1):
 - __Tutorials__ are structured _learning_ experiences through a series of guided steps to solve a meaningful problem. Users actively engage with the material (_action_) aimed at helping them gain new knowledge and skills (_acquisition_).

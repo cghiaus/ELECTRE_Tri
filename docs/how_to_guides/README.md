@@ -14,12 +14,13 @@ Researcher ID: [ORCID](https://orcid.org/0000-0001-5561-1245), [SciProfiles](htt
 __How-to Guides__ provide directions for specific _goals_. Users follow steps to accomplish a task (_action_)
 applying existing knowledge to solve particular problems (_application_).
 
-__How-to Guides__ are goal-oriented.
+__Contents:__
 
-- how to obtain weights for criteria (Simos')
-- how to do a step-by-step ELECTRE Tri-B analysis based on base profiles
-- how to do a step-by-step ELECTRE Tri-B analysis based on extreme levels of alternative  performance
+- `plot_alternative_and_base_profile.ipynb`: How to plot alternatives and base profiles with indifference, preference and veto thresholds.
 
+- `reproducible_pelectre_tri.ipynb`: How to conduct reproducible probabilistic ELECTRE Tri-B by using seed for rendom numbers and increasing the number of simulations.
+
+- `step_by_step.ipynb`: How to do a step-by-step ELECTRE Tri-B analysis based on base profiles.
 
 # Bibliography
 Procida, D. (2017). Diátaxis documentation framework. URL https://diataxis.fr.

@@ -13,15 +13,20 @@ Researcher ID: [ORCID](https://orcid.org/0000-0001-5561-1245), [SciProfiles](htt
 
 __Tutorials__ are structured _learning_ experiences through a series of guided steps to solve a meaningful problem. Users actively engage with the material (_action_) aimed at helping them gain new knowledge and skills (_acquisition_).
 
-__Tutorials__ are _learning_ oriented. They are structured experiences that serve to  through guided steps,
 
-__Contents__
+__Contents:__
 
-`bldg_retrofit_base.ipynb` tutorial on energy retrofit of a building using base profiles for categories.
+- `base_profile.ipynb`: Tutorial on ELECTRE Tri analysis with explicitely defined base profiles.
 
-`bldg_retrofit_level.ipynb` tutorial on energy retrofit of a building using extreme levels in order to find equidistant base profiles (and, consequently, the categories).
+- `base_profile_pelectre.ipynb`: Tutorial on probabilsitic ELECTRE Tri analysis with explicitely defined base profiles.
 
-`simos_revised_tutorial.ipynb` tutorial for finding the weights of criteria.
+- `bldg_retrofit_base.ipynb`:  Tutorial on ELECTRE Tri analysis of energy retrofit of a building using base profiles for categories.
+
+- `bldg_retrofit_base_pelectre.ipynb`: Tutorial on probabilistic ELECTRE Tri analysis of energy retrofit of a building using base profiles for categories. 
+
+- `bldg_retrofit_level.ipynb`: Tutorial on energy retrofit of a building using extreme levels in order to find equidistant base profiles (and, consequently, the categories).
+
+- `simos_revised_tutorial.ipynb`: Tutorial for finding the weights of criteria.
 
 # Bibliography
 Procida, D. (2017). Diátaxis documentation framework. URL https://diataxis.fr.

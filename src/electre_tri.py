@@ -1647,7 +1647,7 @@ def pelectre_tri_b(A, S, B, T, w,
         (typically 0.75) to be used for the credibility of outranking.
 
         n_simulations (int, optional): Number of simulations.
-        Default to 10000.
+        Default to 100.
 
         seed (int, optonal): Seed for the reproducibility of random number
         generator. Use `seed=None` for truely random numbers.

@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-# module `Simos_revised.py`
+# module `simos_revised.py`
 Created on Thu Dec 16 20:56:04 2021 
 
 Last updated on Fri Nov  8 12:37:14 2024

@@ -18,4 +18,4 @@ __Contents__
 - `extrm_levels_electre.py`: Example of ELECTRE Tri-B analysis with extreme profile levels.
 *****
 
-- `electre_tri.py`: ELECTRE Tri module (copy of `../src/electre_tri.py`). Used to simply `ìmport` of module `electre_tri.py`.
+- `electre_tri.py`: ELECTRE Tri module (copy of `../src/electre_tri.py`). Used to simplify `ìmport` of module `electre_tri.py`. No installation required; simply copy the module to your desired location.

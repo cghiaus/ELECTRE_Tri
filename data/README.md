@@ -1,3 +1,4 @@
+
 # Data files
 
 ## Files for Simos' revised method
@@ -15,7 +16,7 @@
 - `bldg_retrofit_base.csv` and `bldg_retrofit_base_std.csv`: 3-alternatives, 2-criteria decision matrix, 2-base profiles for ELECTRE Tri and pELECTRE Tri, respectiely, applied to building energy retrofit. Note the negative values for criteria to be minimized.
 *****
 
-- `bldg_retrofit_level.csv`: same as for `bldg_retrofit_base.csv` but with the definition of categories as a number of equal ranges between the lowest possible and the highest possible level. Note the negative values for criteria to be minimized.
+- `bldg_retrofit_level.csv` and `bldg_retrofit_level_std.csv` same as `bldg_retrofit_base.csv` and `bldg_retrofit_base_std.csv` but with the definition of categories as a number of equal ranges between the lowest possible and the highest possible level. Note the negative values for criteria to be minimized.
 *****
   
 - `default_categories.csv`:

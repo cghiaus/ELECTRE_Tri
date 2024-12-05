@@ -1,4 +1,4 @@
-<font size="6">ELECTRE Tri-B documentation: tutorials </font>
+# ELECTRE Tri-B documentation: tutorials
 
 by Christian Ghiaus 
 

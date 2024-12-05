@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="84.833mm" height="96.43mm" version="1.1" viewBox="0 0 84.833 96.43" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-3.0777 -5.58)">
+  <g fill="#0078e0" font-family="'Arial Narrow'" stroke-width="0">
+   <text x="5.808208" y="18.494432" font-size="3.5278px" stroke="#000000" stroke-linecap="square" xml:space="preserve"><tspan x="5.808208" y="18.494432" fill="#0078e0" font-size="3.5278px" stroke-width="0">read_electre_tri_data</tspan></text>
+   <text transform="matrix(.26458 0 0 .26458 -1.2053 -1.5412)" font-size="13.333px" stroke="#000000" stroke-linecap="square" style="shape-inside:url(#rect3);white-space:pre" xml:space="preserve"><tspan x="26.507812" y="92.771747">read_pelectre_tri_data</tspan></text>
+   <text transform="scale(.26458)" font-size="13.333px" style="shape-inside:url(#rect4);white-space:pre" xml:space="preserve"/>
+   <text x="5.8082089" y="27.967459" font-size="3.5278px" stroke="#000000" stroke-linecap="square" xml:space="preserve"><tspan x="5.8082089" y="27.967459" stroke-width="0">read_electre_tri_extreme_base_profile</tspan></text>
+   <text x="6.9944034" y="55.858063" font-size="3.5278px" stroke="#000000" stroke-linecap="square" xml:space="preserve"><tspan x="6.9944034" y="55.858063" stroke-width="0"/></text>
+   <g font-size="13.333px">
+    <text transform="scale(.26458)" style="shape-inside:url(#rect16);white-space:pre" xml:space="preserve"/>
+    <text transform="scale(.26458)" style="shape-inside:url(#rect18);white-space:pre" xml:space="preserve"/>
+    <text transform="scale(.26458)" style="shape-inside:url(#rect20);white-space:pre" xml:space="preserve"/>
+   </g>
+  </g>
+  <path transform="matrix(1.1031 0 0 2.0648 -13.31 -14.131)" x="17.209295" y="23.53915" width="29.671198" height="13.846559" d="m19.326 23.539h25.438a2.1167 2.1167 45 0 1 2.1167 2.1167v9.6132a2.1167 2.1167 135 0 1-2.1167 2.1167h-25.438a2.1167 2.1167 45 0 1-2.1167-2.1167v-9.6132a2.1167 2.1167 135 0 1 2.1167-2.1167z" fill="#0ff" opacity=".2" stroke="#000" stroke-linecap="square" stroke-width=".16565"/>
+  <g fill="#0078e0" font-family="'Arial Narrow'" font-size="3.5278px" stroke="#000000" stroke-linecap="square" stroke-width="0">
+   <text x="8.6429405" y="41.958714" xml:space="preserve"><tspan x="8.6429405" y="41.958714" stroke-width="0">partial_concordance</tspan></text>
+   <text x="8.7342358" y="45.18504" xml:space="preserve"><tspan x="8.7342358" y="45.18504" stroke-width="0">discordance</tspan></text>
+   <text x="9.1103382" y="48.980824" xml:space="preserve"><tspan x="9.1103382" y="48.980824" stroke-width="0">global_concordance</tspan></text>
+   <text x="9.1715126" y="53.47596" xml:space="preserve"><tspan x="9.1715126" y="53.47596" stroke-width="0">credibility_index</tspan></text>
+   <text x="9.1921835" y="56.743626" xml:space="preserve"><tspan x="9.1921835" y="56.743626" stroke-width="0">outrank</tspan></text>
+   <text x="9.1715126" y="60.004681" xml:space="preserve"><tspan x="9.1715126" y="60.004681" stroke-width="0">classify</tspan></text>
+  </g>
+  <g stroke-linecap="square">
+   <path transform="translate(-2.1167)" x="13.086285" y="33.129276" width="18.897606" height="4.0215116" d="m15.086 33.129h14.898a2 2 45 0 1 2 2v0.02151a2 2 135 0 1-2 2h-14.898a2 2 45 0 1-2-2v-0.02151a2 2 135 0 1 2-2z" fill="#fff" stroke="#999" stroke-width=".25"/>
+   <text x="12.5065" y="36.010208" fill="#0078e0" font-family="'Arial Narrow'" font-size="3.5278px" stroke="#b3b3b3" stroke-width="0" xml:space="preserve"><tspan x="12.5065" y="36.010208" fill="#0078e0" stroke="#b3b3b3" stroke-width="0">electre_tri_b</tspan></text>
+   <path transform="matrix(.75324 0 0 .52133 50.113 57.002)" x="17.209295" y="23.53915" width="29.671198" height="13.846559" d="m19.326 23.539h25.438a2.1167 2.1167 45 0 1 2.1167 2.1167v9.6132a2.1167 2.1167 135 0 1-2.1167 2.1167h-25.438a2.1167 2.1167 45 0 1-2.1167-2.1167v-9.6132a2.1167 2.1167 135 0 1 2.1167-2.1167z" fill="#0ff" opacity=".2" stroke="#000" stroke-width=".39895"/>
+  </g>
+  <g stroke-linecap="square">
+   <text x="66.30291" y="74.453911" fill="#0078e0" font-family="'Arial Narrow'" font-size="3.5278px" stroke="#000000" stroke-width="0" xml:space="preserve"><tspan x="66.30291" y="74.453911" stroke-width="0">electre_tri_b</tspan></text>
+   <path transform="translate(.15776 .62954)" x="64.644173" y="66.103821" width="18.897606" height="4.0215116" d="m66.644 66.104h14.898a2 2 45 0 1 2 2v0.02151a2 2 135 0 1-2 2h-14.898a2 2 45 0 1-2-2v-0.02151a2 2 135 0 1 2-2z" fill="#fff" stroke="#999" stroke-width=".25"/>
+   <text transform="translate(-29.312 6.3447)" x="94.909546" y="63.412659" fill="#0078e0" font-family="'Arial Narrow'" font-size="3.5278px" stroke="#000000" stroke-width="0" style="inline-size:21.4159;white-space:pre" xml:space="preserve"><tspan x="94.909546" y="63.412659">pelectre_tri_b</tspan></text>
+   <path transform="matrix(1.7964 0 0 1.3193 -25.053 37.592)" x="17.209295" y="23.53915" width="29.671198" height="13.846559" d="m19.326 23.539h25.438a2.1167 2.1167 45 0 1 2.1167 2.1167v9.6132a2.1167 2.1167 135 0 1-2.1167 2.1167h-25.438a2.1167 2.1167 45 0 1-2.1167-2.1167v-9.6132a2.1167 2.1167 135 0 1 2.1167-2.1167z" fill="#0ff" opacity=".2" stroke="#000" stroke-width=".16239"/>
+  </g>
+  <g fill="#0078e0" font-family="'Arial Narrow'" stroke="#000000" stroke-linecap="square" stroke-width="0">
+   <text x="8.5245647" y="74.170448" font-size="3.5278px" xml:space="preserve"><tspan x="8.5245647" y="74.170448" stroke-width="0">read_electre_tri_extreme_base_profile</tspan></text>
+   <text transform="matrix(.26458 0 0 .26458 2.0928 41.497)" font-size="13.333px" style="shape-inside:url(#rect7-5);white-space:pre" xml:space="preserve"><tspan x="24.462891" y="137.55886">base_profile</tspan></text>
+   <text x="8.7496347" y="81.580978" font-size="3.5278px" xml:space="preserve"><tspan x="8.7496347" y="81.580978" stroke-width="0">threshold</tspan></text>
+   <text transform="matrix(.26458 0 0 .26458 3.1934 -31.303)" font-size="13.333px" style="shape-inside:url(#rect22);white-space:pre" xml:space="preserve"><tspan x="21" y="438.65651">electre_tri_b</tspan></text>
+  </g>
+  <g stroke-linecap="square">
+   <path x="10.28765" y="67.012878" width="44.725948" height="4.0215116" d="m12.288 67.013h40.726a2 2 45 0 1 2 2v0.02151a2 2 135 0 1-2 2h-40.726a2 2 45 0 1-2-2v-0.02151a2 2 135 0 1 2-2z" fill="#fff" stroke="#999" stroke-width=".25"/>
+   <text x="12.975596" y="69.96843" fill="#0078e0" font-family="'Arial Narrow'" font-size="3.5278px" stroke="#000000" stroke-width="0" xml:space="preserve"><tspan x="12.975596" y="69.96843" stroke-width="0">electre_tri_equidistant_profiles</tspan></text>
+   <text transform="scale(.26458)" fill="none" font-family="'Arial Narrow'" font-size="13.333px" stroke="#000000" stroke-width=".94488" style="shape-inside:url(#rect25);white-space:pre" xml:space="preserve"/>
+  </g>
+  <g fill="#0078e0" font-family="'Arial Narrow'">
+   <text x="5.3203044" y="94.110733" font-size="3.5278px" stroke-linecap="square" stroke-width=".25" xml:space="preserve"><tspan x="5.3203044" y="94.110733" fill="#0078e0" stroke-width=".25">plot_alternatives_vs_base_profile</tspan></text>
+   <text transform="scale(.26458)" font-size="13.333px" style="shape-inside:url(#rect27);white-space:pre" xml:space="preserve"/>
+   <text x="5.3203044" y="98.659691" font-size="3.5278px" stroke-linecap="square" stroke-width=".25" xml:space="preserve"><tspan x="5.3203044" y="98.659691" stroke-width=".25">plot_base_profiles_vs_alternative</tspan></text>
+  </g>
+  <g stroke-linecap="square">
+   <path transform="translate(-.85211 .30433)" x="4.2548075" y="9.4849997" width="84.182953" height="92.200203" d="m6.3715 9.485h79.95a2.1167 2.1167 45 0 1 2.1167 2.1167v87.967a2.1167 2.1167 135 0 1-2.1167 2.1167h-79.95a2.1167 2.1167 45 0 1-2.1167-2.1167v-87.967a2.1167 2.1167 135 0 1 2.1167-2.1167z" fill="#b3b3b3" opacity=".2" stroke="#000" stroke-width=".65"/>
+   <path transform="matrix(1.0017 0 0 .55065 14.209 -7.2891)" x="17.209295" y="23.53915" width="29.671198" height="13.846559" d="m19.326 23.539h25.438a2.1167 2.1167 45 0 1 2.1167 2.1167v9.6132a2.1167 2.1167 135 0 1-2.1167 2.1167h-25.438a2.1167 2.1167 45 0 1-2.1167-2.1167v-9.6132a2.1167 2.1167 135 0 1 2.1167-2.1167z" fill="#fff" stroke="#999" stroke-width=".33661"/>
+   <text x="35.913857" y="11.000152" fill="#0078e0" font-family="'Arial Narrow'" font-size="4.2333px" stroke-width=".1" xml:space="preserve"><tspan x="35.913857" y="11.000152" stroke-width=".1">ELECTRE Tri</tspan></text>
+  </g>
+ </g>
+</svg>

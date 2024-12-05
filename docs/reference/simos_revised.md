@@ -1,6 +1,7 @@
 <!-- markdownlint-disable -->
 
-# module `simos_revised.py`
+<font size="6">Reference manual for module `simos_revised.py`</font>
+
 Created on Thu Dec 16 20:56:04 2021 
 
 Last updated on Fri Nov  8 12:37:14 2024

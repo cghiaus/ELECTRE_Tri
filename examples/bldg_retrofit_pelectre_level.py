@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Nov 11 11:11:11 2024
+Created on Wed Dec  5 21:24:13 2024
 
 @author: cghiaus
 
-ELECTRE Tri-B with extreme levels.
+Probabilistic pELECTRE Tri-B with specified extreme level profiles.
 
 Energy retrofit of a building.
 
@@ -22,48 +22,47 @@ Given:
         - a2: Moderate renovation,
         - a3: Extensive renovation.
 
+    Standard deviatiions for the values of performance matrix:
+        - s1: Basic renovation for all criteria,
+        - s2: Moderate renovation for all criteria,
+        - s3: Extensive renovation for all criteria.
+
     Level profiles:
         - l1: worst (worst possible base profile)
         - l2: best (best possible base profile)
 
 Do:
-    Obtain base profiles and thresholds
     Sort the alternatives into
     Categories:
         - bad >: alteratives worse than b1 (bad) base profile.
         - (bad, good): alternatives between base profiles bad and good.
         - good <: alternatives better than b2 (good) base profile.
-    obtained from level profiles.
+    defined by base profiles.
 
 ----
 See:
-    - docs/tutorials/bldg_retrofit_level.ipynb
+    - docs/tutorials/bldg_retrofit_base.ipynb
     - docs/explanation/electre_tri-b_explained.ipynb
 """
-
 
 import electre_tri as et
 
 # Problem statement
-data_file = "../data/bldg_retrofit_level.csv"
-credibility_threshold = 0.7
+data_file = "../data/bldg_retrofit_level_std.csv"
 
 # Problem solving
-A, L, w = et.read_electre_tri_extreme_base_profile(data_file)
+A, S, L, w = et.read_pelectre_tri_extreme_base_profile(data_file)
 B = et.base_profile(L, n_base_profile=2)
 T = et.threshold(B, threshold_percent=[0.10, 0.25, 0.50])
 
-optimistic, pessimistic = et.electre_tri_b(A, B, T, w,
-                                           credibility_threshold)
+p_opti, p_pessi = et.pelectre_tri_b(
+    A, S, B, T, w,
+    credibility_threshold=0.7,
+    n_simulations=100)
 
 # Results
-# Optimistic sorting
-opti_sort = et.sort(optimistic)
-print('Optimistic sorting')
-print(opti_sort.to_frame(name="alternatives").rename_axis("categories"))
+print("\nProbabilistic optimistic ranking:")
+print(p_opti.to_string(na_rep='0'))
 
-
-# Pessimistic sorting
-pessi_sort = et.sort(pessimistic)
-print('Pessimistic sorting')
-print(pessi_sort.to_frame(name="alternatives").rename_axis("categories"))
+print("\nProbabilistic pessimistic ranking:")
+print(p_pessi.to_string(na_rep='0'))

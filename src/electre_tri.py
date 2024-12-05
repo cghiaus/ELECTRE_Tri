@@ -189,7 +189,7 @@ def read_pelectre_tri_data(filename):
         df[df.iloc[:, 0] == 'A'].iloc[:, 1])
     A.index.name = None
 
-    # Extract V
+    # Extract S
     S = df[df.iloc[:, 0] == 'S'].iloc[:, 2:].set_index(
         df[df.iloc[:, 0] == 'S'].iloc[:, 1])
     S.index.name = None
@@ -246,6 +246,51 @@ def read_electre_tri_extreme_base_profile(filename):
     w.name = None  # Remove the name from the Series
 
     return A, L, w
+
+
+def read_pelectre_tri_extreme_base_profile(filename):
+    """ Reads the data for worst and best possible base profiles.
+
+    Args:
+        filename (str): Name of .csv file containing the data of the problem.
+
+    Returns:
+        A (DataFrame): Performance matrix of alternatives (rows) for
+        criteria (columns).
+
+        S (DataFrame): Standard deviation of performance matrix
+        of alternatives (rows) for criteria (columns).
+
+        L (DataFrame): Worst and best base profiles in ascending order for
+        criteria (columns).
+
+        w (Series): Weight for each criterion.
+
+    """
+
+    # Read the CSV file
+    df = pd.read_csv(filename, header=0)
+
+    # Extract A
+    A = df[df.iloc[:, 0] == 'A'].iloc[:, 2:].set_index(
+        df[df.iloc[:, 0] == 'A'].iloc[:, 1])
+    A.index.name = None
+
+    # Extract S
+    S = df[df.iloc[:, 0] == 'S'].iloc[:, 2:].set_index(
+        df[df.iloc[:, 0] == 'S'].iloc[:, 1])
+    S.index.name = None
+
+    # Extract L
+    L = df[df.iloc[:, 0] == 'L'].iloc[:, 2:].set_index(
+        df[df.iloc[:, 0] == 'L'].iloc[:, 1])
+    L.index.name = None
+
+    # Extract w
+    w = pd.Series(df[df.iloc[:, 0] == 'w'].iloc[0, 2:].dropna())
+    w.name = None  # Remove the name from the Series
+
+    return A, S, L, w
 
 
 def base_profile(L, n_base_profile=4):

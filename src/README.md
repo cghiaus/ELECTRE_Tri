@@ -2,16 +2,16 @@
 
 by Christian Ghiaus
 
-# Installation
+## Installation
 
 This software requires no installation. Simply copy the module files to your desired location.
 
-# Contents
+## Contents
 
 - `electre-tri.py`: ELECTRE Tri-B Multiple-Criteria Decision-Making.
 - `simos_revised`: Simos' method for determining weights of criteria in ELECTRE type methods.
 
-# `electre_tri.py` module structure
+## `electre_tri.py` module structure
 
 ![Documentation](../figs/ELECTRE_Tri_structure.svg)
 

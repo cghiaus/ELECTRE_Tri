@@ -14,9 +14,13 @@ __Reference__ offers detailed technical _information_ on functions from Python m
 
 __Contents:__
 
-- `electre_tri.md`: Reference manual of Python modules `/src/electre_tri.py` on ELECTRE Tri method.
+- `electre_tri.md`: Reference manual of Python modules `/src/electre_tri.py` on ELECTRE Tri method (Figure 2). 
 
 - `simos_revised.md`: Reference manual of Python modules `/src/simos_revised.py` on Simos' method for determining the weights of criteria.
 
+![Documentation](../../figs/ELECTRE_Tri_structure.svg)
+
+> Figure 2. Structure of `electre_tri.py` module.
+> 
 # Bibliography
 Procida, D. (2017). Diátaxis documentation framework. URL https://diataxis.fr.

@@ -1561,94 +1561,6 @@ def electre_tri_b(A, B, T, w, credibility_threshold):
     return optimistic, pessimistic
 
 
-def electre_tri_equidistant_profiles(
-        data_file,
-        n_base_profile=4,
-        threshold_percent=[0.10, 0.25, 0.50],
-        credibility_threshold=0.75):
-    """ELECTRE Tri-B workflow for base profiles from worst/best profiles.
-
-    Workflow
-    --------
-
-    Given:
-        - performance matrix, A
-        - level of worst and best possible base profiles, L
-        - weights of criteria, w
-
-    Calculate:
-        - base profiles, B
-        - theresholds, T
-
-    Perform: electre_tri_b(A, B, T, w, credibility_threshold)
-
-    Args:
-        data_file (str): Name of .csv file containing the data of the problem
-        (performance of alternatives A, worst/best possible base levels L, and
-        weights w).
-
-        n_base_profile (int, optional): Number of equidistant base profiles
-        between worst and best possible.
-        Defaults to 4.
-
-        threshold_percent (list, optional): Percentage of the range
-        between base profiles for
-        veto v, preferrence p, and indifference p thresholds.
-        Defaults to [0.10, 0.25, 0.50].
-
-        credibility_threshold (float, optional): Thershold between 0.5 and 1
-        (typically 0.75) to be used for the credibility of outranking.
-        Defaults to 0.75.
-
-    Returns:
-        optimistic (DataFrame): Optimistic ranking DataFrame with
-        index for categories and columns for alternatives.
-        Values are NaN or 1. Value 1 indicates the category in which is an
-        alternative. There is only one value of 1 per row and per colum, i.e.
-        an alternative belongs to one and only one category.
-
-        pessimistic (DataFrame): Pessimistic ranking DataFrame with
-        index for categories and columns for alternatives.
-        Values are NaN or 1. Value 1 indicates the category in which is an
-        alternative. There is only one value of 1 per row and per colum, i.e.
-        an alternative belongs to one and only one category.
-
-    Example
-    -------
-
-    >>> data_file = './data/default_categories.csv'
-    >>> opti, pessi = electre_tri_equidistant_profiles(
-    ...    data_file,
-    ...    n_base_profile=4,
-    ...    threshold_percent=[0.10, 0.25, 0.50],
-    ...    credibility_threshold=0.7)
-
-
-    where `default_categories.csv` is:
-
-
-    .. code-block:: none
-
-        type, profile,                 Saving/(kWh/m²/year), Cost/(€/m²)
-        A,    a1: Basic renovation,                      50, -100
-        A,    a2: Moderate renovation,                   80, -200
-        A,    a3: Extensive renovation,                 120, -350
-        L,    worst,                                      0, -400
-        L,    best,                                     150,  -50
-        w,   ,                                            0.7,  0.3
-
-   """
-
-    A, L, w = read_electre_tri_extreme_base_profile(data_file)
-    B = base_profile(L)
-    T = threshold(B)
-
-    optimistic, pessimistic = electre_tri_b(A, B, T, w,
-                                            credibility_threshold)
-
-    return optimistic, pessimistic
-
-
 def pelectre_tri_b(A, S, B, T, w,
                    credibility_threshold,
                    n_simulations=100,
@@ -1747,6 +1659,368 @@ def pelectre_tri_b(A, S, B, T, w,
     p_pessi = p_pessi.replace(0, np.nan)
 
     return p_opti, p_pessi
+
+
+def electre_tri_base(
+        data_file,
+        credibility_threshold=0.75):
+    """ELECTRE Tri-B workflow for base profiles defined explicitly.
+
+    Workflow
+    --------
+
+    Given data file with:
+        - performance matrix, A
+        - base profiles, B
+        - indifference q, preferrence p, veto v thresholds, T
+        - weights of criteria, w
+
+    and:
+        - credibility threshold for the validation of an outranking relation
+
+    Perform: electre_tri_b(A, B, T, w,
+                           credibility_threshold)
+
+    Args:
+        data_file (str): Name of .csv file containing the data of the problem
+        (performance of alternatives A, base profiles B, thersholds T,
+         and weights w).
+
+        credibility_threshold (float, optional): Thershold between 0.5 and 1
+        (typically 0.75) to be used for the credibility of outranking.
+        Defaults to 0.75.
+
+    Returns:
+        optimistic (DataFrame): Optimistic classification DataFrame with
+        index for categories and columns for alternatives.
+        Values are NaN or 1. Value 1 indicates the category in which an
+        alternative is classified. There is only one value of 1 per row and
+        per column, i.e. an alternative belongs to one and only one category.
+
+        pessimistic (DataFrame): Optimistic classification DataFrame with
+        index for categories and columns for alternatives.
+        Values are NaN or 1. Value 1 indicates the category in which an
+        alternative is classified. There is only one value of 1 per row and
+        per column, i.e. an alternative belongs to one and only one category.
+
+    Example
+    -------
+
+    >>> opti, pessi = electre_tri_base(
+    ...     data_file="bldg_retrofit_base.csv",
+    ...     credibility_threshold=0.75)
+
+
+    where `bldg_retrofit_base.csv` is:
+
+
+    .. code-block:: none
+
+        type, profile,      Saving/(kWh/m²/year), Cost/(€/m²)
+        A,    a1: Basic,                      50, -100
+        A,    a2: Moderate,                   80, -200
+        A,    a3: Extensive,                 120, -350
+        B,    bad,                            50, -300
+        B,    good,                          100, -100
+        T,    q,                               5,   10
+        T,    p,                              10,   25
+        T,    v,                              20,   50
+        w,   ,                                 0.7,  0.3
+
+   """
+
+    A, B, T, w = read_electre_tri_data(data_file)
+    optimistic, pessimistic = electre_tri_b(A, B, T, w,
+                                            credibility_threshold)
+
+    return optimistic, pessimistic
+
+
+def electre_tri_level(
+        data_file,
+        n_base_profile=4,
+        threshold_percent=[0.10, 0.25, 0.50],
+        credibility_threshold=0.75):
+    """ELECTRE Tri-B workflow for base profiles from worst & best levels.
+
+    Workflow
+    --------
+
+    Given data file with:
+        - performance matrix, A
+        - level of worst and best possible base profiles, L
+        - weights of criteria, w
+
+    and:
+        - number of base profiles
+        - thresholds (q, p, v) as percentages of performance matrix values
+        - credibility threshold for the validation of an outranking relation
+
+    Calculate:
+        - base profiles, B
+        - theresholds, T
+
+    Perform: electre_tri_b(A, B, T, w, credibility_threshold)
+
+    Args:
+        data_file (str): Name of .csv file containing the data of the problem
+        (performance of alternatives A, worst/best possible base levels L, and
+        weights w).
+
+        n_base_profile (int, optional): Number of equidistant base profiles
+        between worst and best possible.
+        Defaults to 4.
+
+        threshold_percent (list, optional): Percentage of the range
+        between base profiles for
+        veto v, preferrence p, and indifference p thresholds.
+        Defaults to [0.10, 0.25, 0.50].
+
+        credibility_threshold (float, optional): Thershold between 0.5 and 1
+        (typically 0.75) to be used for the credibility of outranking.
+        Defaults to 0.75.
+
+    Returns:
+        optimistic (DataFrame): Optimistic classification DataFrame with
+        index for categories and columns for alternatives.
+        Values are NaN or 1. Value 1 indicates the category in which an
+        alternative is classified. There is only one value of 1 per row and
+        per column, i.e. an alternative belongs to one and only one category.
+
+        pessimistic (DataFrame): Optimistic classification DataFrame with
+        index for categories and columns for alternatives.
+        Values are NaN or 1. Value 1 indicates the category in which an
+        alternative is classified. There is only one value of 1 per row and
+        per column, i.e. an alternative belongs to one and only one category.
+
+    Example
+    -------
+
+    >>> opti, pessi = electre_tri_level(
+    ...     data_file="bldg_retrofit_level.csv",
+    ...     n_base_profile=2,
+    ...     threshold_percent=[0.10, 0.25, 0.50],
+    ...     credibility_threshold=0.75)
+
+    where `bldg_retrofit_level.csv` is:
+
+    .. code-block:: none
+
+        type, profile,                 Saving/(kWh/m²/year), Cost/(€/m²)
+        A,    a1: Basic,                      50, -100
+        A,    a2: Moderate,                   80, -200
+        A,    a3: Extensive,                 120, -350
+        L,    worst,                           0, -400
+        L,    best,                          150,  -50
+        w,   ,                                 0.7,  0.3
+
+   """
+
+    A, L, w = read_electre_tri_extreme_base_profile(data_file)
+    B = base_profile(L, n_base_profile)
+    T = threshold(B, threshold_percent)
+
+    optimistic, pessimistic = electre_tri_b(A, B, T, w,
+                                            credibility_threshold)
+
+    return optimistic, pessimistic
+
+
+def pelectre_tri_base(
+        data_file,
+        credibility_threshold=0.75,
+        n_simulations=100,
+        seed=123):
+    """Probabilistic ELECTRE Tri-B workflow for base profiles defined
+    explicitly.
+
+    Workflow
+    --------
+
+    Given data file with:
+        - performance matrix, A
+        - standard deviations of values of performance matrix, S
+        - base profiles, B
+        - indifference q, preferrence p, veto v thresholds, T
+        - weights of criteria, w
+
+    and:
+        - credibility threshold for the validation of an outranking relation
+        - number of Monte Carlo simulations
+        - seed for random numbers
+
+    Perform: electre_tri_b(A, B, T, w,
+                           credibility_threshold)
+
+    Args:
+        data_file (str): Name of .csv file containing the data of the problem
+        (performance of alternatives A, base profiles B, thersholds T,
+         and weights w).
+
+        credibility_threshold (float, optional): Thershold between 0.5 and 1
+        (typically 0.75) to be used for the credibility of outranking.
+        Defaults to 0.75.
+
+    Returns:
+        optimistic (DataFrame): Optimistic ranking DataFrame with
+        index for categories and columns for alternatives.
+        Values are NaN or 1. Value 1 indicates the category in which is an
+        alternative. There is only one value of 1 per row and per colum, i.e.
+        an alternative belongs to one and only one category.
+
+        pessimistic (DataFrame): Pessimistic ranking DataFrame with
+        index for categories and columns for alternatives.
+        Values are NaN or 1. Value 1 indicates the category in which is an
+        alternative. There is only one value of 1 per row and per colum, i.e.
+        an alternative belongs to one and only one category.
+
+        p_opti (DataFrame): Probabilistic optimistic classification
+        DataFrame with index for categories and columns for alternatives.
+        Values are NaN or floats from 0 to 1 indicating the probability of
+        membership of an altenative to a category. The sum of values on a
+        columns is 1.
+
+        p_pessi (DataFrame): Probabilistic pessimistic classification
+        DataFrame with index for categories and columns for alternatives.
+        Values are NaN or floats from 0 to 1 indicating the probability of
+        membership of an altenative to a category. The sum of values on a
+        columns is 1.
+
+    Example
+    -------
+
+    >>> opti, pessi = pelectre_tri_base(
+    ...     data_file="bldg_retrofit_base_std.csv",
+    ...     credibility_threshold=0.75,
+    ...     n_simulations=100,
+    ...     seed=123)
+
+    where `bldg_retrofit_base_std.csv` is:
+
+
+    .. code-block:: none
+
+        type, profile,      Saving/(kWh/m²/year), Cost/(€/m²)
+        A,    a1: Basic,                      50, -100
+        A,    a2: Moderate,                   80, -200
+        A,    a3: Extensive,                 120, -350
+        S,    a1: Basic,                       5,   10
+        S,    a2: Moderate,                    8,   20
+        S,    a3: Extensive,                  12,   35
+        B,    bad,                            50, -300
+        B,    good,                          100, -100
+        T,    q,                               5,   10
+        T,    p,                              10,   25
+        T,    v,                              20,   50
+        w,   ,                                 0.7,  0.3
+
+   """
+
+    A, S, B, T, w = read_pelectre_tri_data(data_file)
+    p_opti, p_pessi = pelectre_tri_b(A, S, B, T, w,
+                                     credibility_threshold)
+    return p_opti, p_pessi
+
+
+def pelectre_tri_level(
+        data_file,
+        n_base_profile=4,
+        threshold_percent=[0.10, 0.25, 0.50],
+        credibility_threshold=0.75,
+        n_simulations=100,
+        seed=123):
+    """Probabilistic ELECTRE Tri-B workflow for base profiles from
+    worst & best levels.
+
+    Workflow
+    --------
+
+    Given data file with:
+        - performance matrix, A
+        - standard deviations of values of performance matrix, S
+        - level of worst and best possible base profiles, L
+        - weights of criteria, w
+
+    and:
+        - number of base profiles
+        - thresholds (q, p, v) as percentages of performance matrix values
+        - credibility threshold for the validation of an outranking relation
+        - number of Monte Carlo simulations
+        - seed for random numbers
+
+    Calculate:
+        - base profiles, B
+        - theresholds, T
+
+    Perform: electre_tri_b(A, B, T, w, credibility_threshold)
+
+    Args:
+        data_file (str): Name of .csv file containing the data of the problem
+        (performance of alternatives A, worst/best possible base levels L, and
+        weights w).
+
+        n_base_profile (int, optional): Number of equidistant base profiles
+        between worst and best possible.
+        Defaults to 4.
+
+        threshold_percent (list, optional): Percentage of the range
+        between base profiles for
+        veto v, preferrence p, and indifference p thresholds.
+        Defaults to [0.10, 0.25, 0.50].
+
+        credibility_threshold (float, optional): Thershold between 0.5 and 1
+        (typically 0.75) to be used for the credibility of outranking.
+        Defaults to 0.75.
+
+    Returns:
+        p_opti (DataFrame): Probabilistic optimistic classification
+        DataFrame with index for categories and columns for alternatives.
+        Values are NaN or floats from 0 to 1 indicating the probability of
+        membership of an altenative to a category. The sum of values on a
+        columns is 1.
+
+        p_pessi (DataFrame): Probabilistic pessimistic classification
+        DataFrame with index for categories and columns for alternatives.
+        Values are NaN or floats from 0 to 1 indicating the probability of
+        membership of an altenative to a category. The sum of values on a
+        columns is 1.
+
+    Example
+    -------
+
+    >>> opti, pessi = pelectre_tri_level(
+    ...     data_file="bldg_retrofit_level_std.csv",
+    ...     n_base_profile=2,
+    ...     threshold_percent=[0.10, 0.25, 0.50],
+    ...     credibility_threshold=0.75,
+    ...     n_simulations=100,
+    ...     seed=123)
+
+    where `bldg_retrofit_level_std.csv` is:
+
+    .. code-block:: none
+
+        type, profile,                 Saving/(kWh/m²/year), Cost/(€/m²)
+        A,    a1: Basic,                      50, -100
+        A,    a2: Moderate,                   80, -200
+        A,    a3: Extensive,                 120, -350
+        S,    a1: Basic,                       5,   10
+        S,    a2: Moderate,                    8,   20
+        S,    a3: Extensive,                  12,   35
+        L,    worst,                           0, -400
+        L,    best,                          150,  -50
+        w,   ,                                 0.7,  0.3
+
+   """
+
+    A, L, w = read_electre_tri_extreme_base_profile(data_file)
+    B = base_profile(L, n_base_profile)
+    T = threshold(B, threshold_percent)
+
+    optimistic, pessimistic = electre_tri_b(A, B, T, w,
+                                            credibility_threshold)
+
+    return optimistic, pessimistic
 
 
 def plot_alternatives_vs_base_profile(A, B_row, T):
@@ -1898,35 +2172,21 @@ def main():
     folder = '../data/'
     # file = 'isfaki_T10_1_T10_13.csv'
     # file = 'mous3docl99_2.csv'
-    file = 'simple_example.csv'
-    file_std = 'simple_example_std.csv'
+    file = 'base_profile.csv'
     data_file = folder + file
 
+    print("\nStep-by-step ELECTRE Tri-B")
+    print("============")
+
     A, B, T, w = read_electre_tri_data(data_file)
-
-    # c_ab = partial_concordance_ab(A, B, T)
-    # print("\nPartial concordance \nc_ab = \n", c_ab)
-
-    # c_ba = partial_concordance_ba(A, B, T)
-    # print("\nPartial concordance \nc_ba = \n", c_ba)
 
     c_ab, c_ba = partial_concordance(A, B, T)
     print("\nPartial concordance \nc_ab = \n", c_ab)
     print("\nPartial concordance \nc_ba = \n", c_ba)
 
-    # d_ab = discordance_ab(A, B, T)
-    # print("\nDiscordance \nd_ab = \n", d_ab)
-
-    # d_ba = discordance_ba(A, B, T)
-    # print("\nDiscordance \nd_ba = \n", d_ba)
-
     d_ab, d_ba = discordance(A, B, T)
     print("\nDiscordance \nd_ab = \n", d_ab)
     print("\nDiscordance \nd_ba = \n", d_ba)
-
-    # print(d_ab.xs('c1', level='criteria'))
-    # print(d_ab.xs('M', level='base'))
-    # print(d_ab.xs('M', level='base').mul(w, axis=0))
 
     C_ab = global_concordance(c_ab, w)
     print('\nGlobal concordance \nC_ab = \n', C_ab)
@@ -1965,29 +2225,23 @@ def main():
     print('\nPessimistic sorting = ')
     print(pessi_rank)
 
-    opti, pessi = electre_tri_b(A, B, T, w,
-                                credibility_threshold=0.7)
-    print("\nOptimistic ranking:")
-    print(opti)
-
-    print("\nPessimistic ranking:")
-    print(pessi)
-
-    opti, pessi = electre_tri_b(A, B, T, w,
-                                credibility_threshold=0.7)
-    print("\nOptimistic ranking:")
-    print(opti)
+    # print()
+    # opti, pessi = electre_tri_b(A, B, T, w,
+    #                             credibility_threshold=0.7)
+    # print("\nOptimistic ranking:")
+    # print(opti)
 
     # print("\nPessimistic ranking:")
     # print(pessi)
 
-    # opti_sort = sort(opti)
-    # print('\nOptimistic sorting = \n', opti_sort)
+    # opti, pessi = electre_tri_b(A, B, T, w,
+    #                             credibility_threshold=0.7)
+    # print("\nOptimistic ranking:")
+    # print(opti)
 
-    # pessi_sort = sort(pessi)
-    # print('\nPessimistic sorting = \n', pessi_sort)
+    print("\nPlots")
+    print("============")
 
-    # Plots
     plot_base_profiles_vs_alternative(B, A.iloc[0], T)
 
     plot_base_profiles_vs_alternative(B, A.iloc[0], T)
@@ -1996,44 +2250,56 @@ def main():
     plot_alternatives_vs_base_profile(A, B.iloc[0], T)
     plot_alternatives_vs_base_profile(A, B.iloc[1], T)
 
-    outranking = outrank(sigma_ab, sigma_ba, credibility_threshold=0.7)
-    print('\noutrankinging:\n')
-    print(outranking)
+    """
+    Workflows
+    """
+    print("\nWorkflows ELECTRE Tri")
+    print("============")
 
-    """
-    ELECTRE Tri-B with default categories and base profiles
-    """
-    data_file = folder + 'default_categories.csv'
-    opti, pessi = electre_tri_equidistant_profiles(
-        data_file,
-        n_base_profile=4,
+    opti, pessi = electre_tri_base(
+        data_file=folder + "bldg_retrofit_base.csv",
+        credibility_threshold=0.75)
+    print("\nBase: optimistic ranking:")
+    print(opti)
+
+    print("\nBase: pessimistic ranking:")
+    print(pessi)
+
+    opti, pessi = electre_tri_level(
+        data_file=folder + "bldg_retrofit_level.csv",
+        n_base_profile=2,
         threshold_percent=[0.10, 0.25, 0.50],
-        credibility_threshold=0.7)
+        credibility_threshold=0.75)
+    print("\nLevel: optimistic ranking:")
+    print(opti)
 
-    print('\nOptimistic sorting')
-    print(sort(opti).to_frame(name="alternatives").rename_axis("categories"))
+    print("\nLevel: pessimistic ranking:")
+    print(pessi)
 
-    print('\nPessimistic sorting')
-    print(sort(pessi).to_frame(name="alternatives").rename_axis("categories"))
+    print("\nWorkflows pELECTRE Tri\n")
+    opti, pessi = pelectre_tri_base(
+        data_file=folder + "bldg_retrofit_base_std.csv",
+        credibility_threshold=0.75,
+        n_simulations=100,
+        seed=123)
+    print("\nBase: optimistic ranking:")
+    print(opti)
 
-    """
-    pELECTRE Tri
-    """
-    data_file = folder + file_std
+    print("\nBase: pessimistic ranking:")
+    print(pessi)
 
-    A, S, B, T, w = read_pelectre_tri_data(data_file)
-    credibility_threshold = 0.7
+    opti, pessi = pelectre_tri_level(
+        data_file=folder + "bldg_retrofit_level_std.csv",
+        n_base_profile=2,
+        threshold_percent=[0.10, 0.25, 0.50],
+        credibility_threshold=0.75,
+        n_simulations=100,
+        seed=123)
+    print("\nLevel: optimistic ranking:")
+    print(opti)
 
-    p_opti, p_pessi = pelectre_tri_b(
-        A, S, B, T, w,
-        credibility_threshold,
-        n_simulations=10)
-
-    print("\nProbabilistic optimistic ranking:")
-    print(p_opti)
-
-    print("\nProbabilistic pessimistic ranking:")
-    print(p_pessi)
+    print("\nLevel: pessimistic ranking:")
+    print(pessi)
 
 
 if __name__ == "__main__":

@@ -22,5 +22,7 @@ __Contents:__
 
 - `step_by_step.ipynb`: How to do a step-by-step ELECTRE Tri-B analysis based on base profiles.
 
+- `workflows.ipynb`: How to execute ELECTRE Tri-B workflows for crisp and probabilistic data.
+
 # Bibliography
 Procida, D. (2017). Diátaxis documentation framework. URL https://diataxis.fr.

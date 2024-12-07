@@ -1753,7 +1753,8 @@ def electre_tri_level(
 
     and:
         - number of base profiles
-        - thresholds (q, p, v) as percentages of performance matrix values
+        - thresholds (q, p, v) as a percentage
+        of the range between two consecutive equidistant base profiles
         - credibility threshold for the validation of an outranking relation
 
     Calculate:
@@ -1931,7 +1932,8 @@ def pelectre_tri_level(
 
     and:
         - number of base profiles
-        - thresholds (q, p, v) as percentages of performance matrix values
+        - thresholds (q, p, v) as a percentage
+        of the range between two consecutive equidistant base profiles
         - credibility threshold for the validation of an outranking relation
         - number of Monte Carlo simulations
         - seed for random numbers

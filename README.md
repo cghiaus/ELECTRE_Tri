@@ -11,6 +11,8 @@ ELECTRE Tri-B is a Multiple-Criteria Decision-Making ([MCDM](https://en.m.wikipe
 
 This repository contains a framework and a Python 3.11.7 implementation of ELECTRE Tri-B and of Simos' method for determining the weights of criteria, along with documentation and examples.
 
+The crisp and probabilistic ELECTRE Tri-B method is implemented the module [electre_tri.py](./src/electre_tri.py) in four workflows, presented in [workflows.ipynb](./docs/how_to_guides/workflows.ipynb). 
+
 ## Installation
 
 This software requires no installation. Simply copy the module files to your desired location.

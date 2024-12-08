@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Oct 11 19:24:18 2024
-Last modified on Sun Nov 17 08:00:13 2024
+Created on Fri Oct 18 19:24:18 2024
+Last modified on Thu Dec 05 08:00:13 2024
 
 @author: cghiaus
 
@@ -2003,12 +2003,12 @@ def pelectre_tri_level(
 
    """
 
-    A, L, w = read_electre_tri_level(data_file)
+    A, S, L, w = read_pelectre_tri_level(data_file)
     B = base_profile(L, n_base_profile)
     T = threshold(B, threshold_percent)
 
-    optimistic, pessimistic = electre_tri_b(A, B, T, w,
-                                            credibility_threshold)
+    optimistic, pessimistic = pelectre_tri_b(A, S, B, T, w,
+                                             credibility_threshold)
 
     return optimistic, pessimistic
 

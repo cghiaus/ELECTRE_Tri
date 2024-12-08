@@ -2,10 +2,10 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="98.324837mm"
-   height="141.77527mm"
+   width="94.578804mm"
+   height="138.75244mm"
    version="1.1"
-   viewBox="0 0 98.32484 141.77527"
+   viewBox="0 0 94.578807 138.75244"
    id="svg28"
    sodipodi:docname="ELECTRE_Tri_structure.svg"
    inkscape:version="1.3.2 (091e20e, 2023-11-25)"
@@ -15,23 +15,6 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs28">
-    <inkscape:path-effect
-       effect="fillet_chamfer"
-       id="path-effect8"
-       is_visible="true"
-       lpeversion="1"
-       nodesatellites_param="F,0,0,1,0,2.6458333,0,1 @ F,0,0,1,0,2.6458333,0,1 @ F,0,0,1,0,2.6458333,0,1 @ F,0,0,1,0,2.6458333,0,1"
-       radius="10"
-       unit="px"
-       method="auto"
-       mode="F"
-       chamfer_steps="1"
-       flexible="false"
-       use_knot_distance="true"
-       apply_no_radius="true"
-       apply_with_radius="true"
-       only_selected="false"
-       hide_knots="false" />
     <inkscape:path-effect
        effect="fillet_chamfer"
        id="path-effect7"
@@ -242,9 +225,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.3784454"
-     inkscape:cx="100.11278"
-     inkscape:cy="252.45831"
+     inkscape:zoom="1.780949"
+     inkscape:cx="189.22496"
+     inkscape:cy="336.33754"
      inkscape:window-width="1392"
      inkscape:window-height="1005"
      inkscape:window-x="0"
@@ -255,8 +238,8 @@
     <inkscape:grid
        id="grid41"
        units="px"
-       originx="-8.5985719"
-       originy="2.0214928e-06"
+       originx="-10.965239"
+       originy="2.0182482e-06"
        spacingx="0.26458333"
        spacingy="0.26458334"
        empcolor="#0099e5"
@@ -275,7 +258,7 @@
      xml:space="preserve"
      id="text9"
      style="font-size:3.5278px;font-family:'Arial Narrow';white-space:pre;inline-size:26.5384;display:inline;fill:#0000ff;stroke:#000000;stroke-width:0;stroke-linecap:square"
-     transform="translate(31.818906,29.436782)"><tspan
+     transform="translate(29.452239,23.086778)"><tspan
        x="-27.291899"
        y="43.551647"
        id="tspan30">partial_concordance
@@ -308,9 +291,35 @@
        y="74.419907"
        id="tspan37">
 </tspan></text>
+  <path
+     x="17.209295"
+     y="23.53915"
+     width="29.671198"
+     height="13.846559"
+     d="m 37.980041,0.124998 h 25.48124 a 2.1202984,1.1655609 0 0 1 2.1203,1.165563 V 6.58407 a 2.1202984,1.1655609 0 0 1 -2.1203,1.165561 H 37.980041 A 2.1202984,1.1655609 0 0 1 35.859743,6.58407 V 1.290561 a 2.1202984,1.1655609 0 0 1 2.120298,-1.165563 z"
+     fill="#ffffff"
+     stroke="#999999"
+     stroke-width="0.249996"
+     id="path27"
+     style="opacity:0.2;fill:#000000;stroke-linecap:square" />
+  <text
+     x="40.326042"
+     y="5.4524994"
+     fill="#0078e0"
+     font-family="'Arial Narrow'"
+     font-size="4.2333px"
+     stroke-width="0.1"
+     xml:space="preserve"
+     id="text27"
+     style="fill:#0000ff;stroke-linecap:square"><tspan
+       x="40.326042"
+       y="5.4524994"
+       stroke-width="0.1"
+       id="tspan27"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow Bold Condensed';fill:#0000ff">ELECTRE Tri</tspan></text>
   <text
      xml:space="preserve"
-     transform="matrix(0.26458333,0,0,0.26458333,-2.5583457,4.953938)"
+     transform="matrix(0.26458333,0,0,0.26458333,-4.9250123,4.953938)"
      id="text31"
      style="font-size:13.3333px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow';white-space:pre;shape-inside:url(#rect31);display:inline;opacity:1;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:2.45669;stroke-linecap:square;stroke-opacity:1"><tspan
        x="26.779297"
@@ -335,12 +344,12 @@
 </tspan></text>
   <text
      xml:space="preserve"
-     transform="matrix(0.26458333,0,0,0.26458333,-2.5583457,2.837271)"
+     transform="matrix(0.26458333,0,0,0.26458333,-4.9250123,2.837271)"
      id="text32"
      style="font-size:13.3333px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow';white-space:pre;shape-inside:url(#rect32);display:inline;opacity:1;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:2.45669;stroke-linecap:square;stroke-opacity:1" />
   <text
      xml:space="preserve"
-     transform="matrix(0.26458333,0,0,0.26458333,-1.0948695,10.086312)"
+     transform="matrix(0.26458333,0,0,0.26458333,-3.4615361,10.086312)"
      id="text33"
      style="font-size:13.3333px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow';white-space:pre;shape-inside:url(#rect33);display:inline;opacity:1;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:2.45669;stroke-linecap:square;stroke-opacity:1"><tspan
        x="21.736328"
@@ -352,7 +361,7 @@
        id="tspan44">threshold</tspan></text>
   <text
      xml:space="preserve"
-     transform="matrix(0.26458333,0,0,0.26458333,-2.5583457,36.703955)"
+     transform="matrix(0.26458333,0,0,0.26458333,-4.9250123,30.883118)"
      id="text35"
      style="font-size:13.3333px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow';white-space:pre;shape-inside:url(#rect35);display:inline;opacity:1;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:2.45669;stroke-linecap:square;stroke-opacity:1"><tspan
        x="27.115234"
@@ -364,7 +373,7 @@
        id="tspan46">rank</tspan></text>
   <text
      xml:space="preserve"
-     transform="matrix(0.26458333,0,0,0.26458333,9.8615341,13.788233)"
+     transform="matrix(0.26458333,0,0,0.26458333,7.4948675,13.788233)"
      id="text36"
      style="font-size:13.3333px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow';white-space:pre;shape-inside:url(#rect36);display:inline;opacity:1;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:2.45669;stroke-linecap:square;stroke-opacity:1"><tspan
        x="187.83984"
@@ -376,12 +385,12 @@
        id="tspan48">pelectre_tri</tspan></text>
   <text
      xml:space="preserve"
-     transform="matrix(0.26458333,0,0,0.26458333,-2.5583457,2.837271)"
+     transform="matrix(0.26458333,0,0,0.26458333,-4.9250123,2.837271)"
      id="text37"
      style="font-size:13.3333px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow';white-space:pre;shape-inside:url(#rect37);display:inline;opacity:1;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:2.45669;stroke-linecap:square;stroke-opacity:1" />
   <text
      xml:space="preserve"
-     transform="matrix(0.26458333,0,0,0.26458333,10.004344,16.224231)"
+     transform="matrix(0.26458333,0,0,0.26458333,7.6376775,16.224231)"
      id="text38"
      style="font-size:13.3333px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow';white-space:pre;shape-inside:url(#rect38);display:inline;opacity:1;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:2.45669;stroke-linecap:square;stroke-opacity:1"><tspan
        x="188.2168"
@@ -401,7 +410,7 @@
        id="tspan52">pelectre_tri_level</tspan></text>
   <text
      xml:space="preserve"
-     transform="matrix(0.26458333,0,0,0.26458333,0.37756486,41.323463)"
+     transform="matrix(0.26458333,0,0,0.26458333,-1.9891017,41.323463)"
      id="text39"
      style="font-size:13.3333px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow';white-space:pre;shape-inside:url(#rect39);display:inline;opacity:1;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:2.45669;stroke-linecap:square;stroke-opacity:1"><tspan
        x="15.654297"
@@ -414,7 +423,7 @@
 </tspan></text>
   <text
      xml:space="preserve"
-     transform="matrix(0.26458333,0,0,0.26458333,-2.5583457,2.837271)"
+     transform="matrix(0.26458333,0,0,0.26458333,-4.9250123,2.837271)"
      id="text40"
      style="font-size:13.3333px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow';white-space:pre;shape-inside:url(#rect40);display:inline;opacity:1;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:2.45669;stroke-linecap:square;stroke-opacity:1" />
   <path
@@ -427,7 +436,7 @@
      inkscape:path-effect="#path-effect1"
      sodipodi:type="rect"
      d="M 2.9959354,12.59868 H 44.324268 a 2.6458333,2.6458333 45 0 1 2.645833,2.645833 v 14.246799 a 2.6458333,2.6458333 135 0 1 -2.645833,2.645833 H 2.9959354 A 2.6458333,2.6458333 45 0 1 0.35010213,29.491312 V 15.244513 A 2.6458333,2.6458333 135 0 1 2.9959354,12.59868 Z"
-     transform="translate(2.3469)" />
+     transform="translate(-0.01976651)" />
   <path
      style="opacity:0.2;fill:#000000;fill-opacity:1;stroke:#999999;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1"
      id="rect41-6"
@@ -438,7 +447,7 @@
      inkscape:path-effect="#path-effect2"
      sodipodi:type="rect"
      d="M 2.9155998,40.959919 H 44.404603 a 2.6458333,2.6458333 45 0 1 2.645834,2.645833 v 5.243263 a 2.6458333,2.6458333 135 0 1 -2.645834,2.645833 H 2.9155998 A 2.6458333,2.6458333 45 0 1 0.26976651,48.849015 V 43.605752 A 2.6458333,2.6458333 135 0 1 2.9155998,40.959919 Z"
-     transform="translate(2.3469)" />
+     transform="translate(-0.01976651)" />
   <path
      style="opacity:0.2;fill:#000000;fill-opacity:1;stroke:#999999;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1"
      id="rect41-6-6"
@@ -449,7 +458,7 @@
      inkscape:path-effect="#path-effect3"
      sodipodi:type="rect"
      d="m 3.0521765,63.437355 41.3516015,0 a 2.6458333,2.6458333 45 0 1 2.645834,2.645833 v 22.168621 a 2.6458333,2.6458333 135 0 1 -2.645834,2.645833 H 3.0521765 A 2.6458333,2.6458333 45 0 1 0.40634316,88.251809 V 66.083188 A 2.6458333,2.6458333 135 0 1 3.0521765,63.437355 Z"
-     transform="matrix(0.99832325,0,0,1.3395496,2.2105855,-21.425033)" />
+     transform="translate(-0.01976651)" />
   <path
      style="opacity:0.2;fill:#000000;fill-opacity:1;stroke:#999999;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1"
      id="rect41-6-6-1"
@@ -460,7 +469,7 @@
      inkscape:path-effect="#path-effect4"
      sodipodi:type="rect"
      d="M 2.9189043,96.927895 H 44.404578 a 2.6458333,2.6458333 45 0 1 2.645833,2.645833 v 5.557292 a 2.6458333,2.6458333 135 0 1 -2.645833,2.64583 H 2.9189043 A 2.6458333,2.6458333 45 0 1 0.27307099,105.13102 V 99.573728 A 2.6458333,2.6458333 135 0 1 2.9189043,96.927895 Z"
-     transform="translate(2.3469,13.229171)" />
+     transform="translate(-0.01976651,7.408336)" />
   <path
      style="opacity:0.2;fill:#000000;fill-opacity:1;stroke:#999999;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1"
      id="rect41-6-6-1-9"
@@ -471,9 +480,9 @@
      inkscape:path-effect="#path-effect5"
      sodipodi:type="rect"
      d="m 2.91718,120.24171 h 41.512277 a 2.6458333,2.6458333 45 0 1 2.645833,2.64583 v 5.56074 a 2.6458333,2.6458333 135 0 1 -2.645833,2.64583 H 2.91718 a 2.6458333,2.6458333 45 0 1 -2.64583325,-2.64583 v -5.56074 A 2.6458333,2.6458333 135 0 1 2.91718,120.24171 Z"
-     transform="translate(2.3469,7.408336)" />
+     transform="translate(-0.01976651,7.408336)" />
   <text
-     x="11.221841"
+     x="8.8551741"
      y="11.169312"
      fill="#0078e0"
      font-family="'Arial Narrow'"
@@ -483,13 +492,13 @@
      xml:space="preserve"
      id="text22"
      style="stroke-linecap:square"><tspan
-       x="11.221841"
+       x="8.8551741"
        y="11.169312"
        stroke-width="0"
        id="tspan22"
        style="fill:#0000ff">Read functions</tspan></text>
   <text
-     transform="matrix(0.26458,0,0,0.26458,42.6125,-42.878652)"
+     transform="matrix(0.26458,0,0,0.26458,40.245833,-42.878652)"
      fill="none"
      font-family="'Arial Narrow'"
      font-size="13.333px"
@@ -499,7 +508,7 @@
      xml:space="preserve"
      id="text23" />
   <text
-     x="11.055526"
+     x="8.688859"
      y="38.949928"
      fill="#0078e0"
      font-family="'Arial Narrow'"
@@ -509,7 +518,7 @@
      xml:space="preserve"
      id="text22-1"
      style="stroke-linecap:square"><tspan
-       x="11.055526"
+       x="8.688859"
        y="38.949928"
        stroke-width="0"
        id="tspan22-1"
@@ -525,15 +534,15 @@
      xml:space="preserve"
      id="text22-1-5"
      style="white-space:pre;inline-size:35.3024;display:inline;stroke-linecap:square"
-     transform="translate(-55.657826,17.422582)"><tspan
+     transform="translate(-58.024493,17.422582)"><tspan
        x="68.030205"
        y="44.196476"
        id="tspan56"><tspan
          style="fill:#0000ff"
          id="tspan55">ELECTRE Tri functions</tspan></tspan></text>
   <text
-     x="11.393399"
-     y="108.91261"
+     x="9.0267324"
+     y="103.09177"
      fill="#0078e0"
      font-family="'Arial Narrow'"
      font-size="3.5278px"
@@ -542,13 +551,13 @@
      xml:space="preserve"
      id="text22-1-0"
      style="stroke-linecap:square"><tspan
-       x="11.393399"
-       y="108.91261"
+       x="9.0267324"
+       y="103.09177"
        stroke-width="0"
        id="tspan22-1-8"
        style="fill:#0000ff">Results</tspan></text>
   <text
-     x="11.065787"
+     x="8.6991205"
      y="126.56895"
      fill="#0078e0"
      font-family="'Arial Narrow'"
@@ -558,7 +567,7 @@
      xml:space="preserve"
      id="text22-1-0-5"
      style="stroke-linecap:square"><tspan
-       x="11.065787"
+       x="8.6991205"
        y="126.56895"
        stroke-width="0"
        id="tspan22-1-8-1"
@@ -573,9 +582,9 @@
      inkscape:path-effect="#path-effect6"
      sodipodi:type="rect"
      d="m 56.968213,63.467564 h 34.734522 a 2.6458333,2.6458333 45 0 1 2.645833,2.645833 v 5.282795 a 2.6458333,2.6458333 135 0 1 -2.645833,2.645834 H 56.968213 A 2.6458333,2.6458333 45 0 1 54.32238,71.396192 v -5.282795 a 2.6458333,2.6458333 135 0 1 2.645833,-2.645833 z"
-     transform="translate(2.3469)" />
+     transform="translate(-0.01976651)" />
   <text
-     x="66.374321"
+     x="64.007652"
      y="61.926537"
      fill="#0078e0"
      font-family="'Arial Narrow'"
@@ -585,13 +594,13 @@
      xml:space="preserve"
      id="text22-1-8"
      style="stroke-linecap:square"><tspan
-       x="66.374321"
+       x="64.007652"
        y="61.926537"
        stroke-width="0"
        id="tspan22-1-0"
        style="fill:#0000ff">Composite functions</tspan></text>
   <text
-     x="66.65461"
+     x="64.287941"
      y="79.656433"
      fill="#0078e0"
      font-family="'Arial Narrow'"
@@ -601,7 +610,7 @@
      xml:space="preserve"
      id="text22-1-8-1"
      style="stroke-linecap:square"><tspan
-       x="66.65461"
+       x="64.287941"
        y="79.656433"
        stroke-width="0"
        id="tspan22-1-0-0"
@@ -616,45 +625,5 @@
      inkscape:path-effect="#path-effect7"
      sodipodi:type="rect"
      d="m 57.056539,88.255852 h 34.557866 a 2.6458333,2.6458333 45 0 1 2.645834,2.645833 v 14.160795 a 2.6458333,2.6458333 135 0 1 -2.645834,2.64583 H 57.056539 a 2.6458333,2.6458333 45 0 1 -2.645833,-2.64583 V 90.901685 a 2.6458333,2.6458333 135 0 1 2.645833,-2.645833 z"
-     transform="translate(2.3469,-7.408332)" />
-  <path
-     style="opacity:1;fill:none;stroke:#0000ff;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1"
-     id="rect1"
-     width="97.824837"
-     height="137.58795"
-     x="0.25"
-     y="3.9373143"
-     inkscape:path-effect="#path-effect8"
-     sodipodi:type="rect"
-     d="M 2.8958333,3.9373143 H 95.429003 a 2.6458333,2.6458333 45 0 1 2.645834,2.6458333 l 0,132.2962824 a 2.6458333,2.6458333 135 0 1 -2.645834,2.64584 H 2.8958333 A 2.6458333,2.6458333 45 0 1 0.25,138.87943 V 6.5831476 A 2.6458333,2.6458333 135 0 1 2.8958333,3.9373143 Z" />
-  <g
-     id="g8"
-     transform="translate(1.8374276,22.763515)">
-    <path
-       x="17.209295"
-       y="23.53915"
-       width="29.671198"
-       height="13.846559"
-       d="m 41.929557,-22.229223 h 25.48124 a 2.1202984,1.1655609 0 0 1 2.1203,1.165563 v 5.293509 a 2.1202984,1.1655609 0 0 1 -2.1203,1.165561 h -25.48124 a 2.1202984,1.1655609 0 0 1 -2.120298,-1.165561 v -5.293509 a 2.1202984,1.1655609 0 0 1 2.120298,-1.165563 z"
-       fill="#ffffff"
-       stroke="#999999"
-       stroke-width="0.249996"
-       id="path27"
-       style="opacity:1;fill:#b3b3b3;stroke-linecap:square" />
-    <text
-       x="44.407951"
-       y="-17.347212"
-       fill="#0078e0"
-       font-family="'Arial Narrow'"
-       font-size="4.2333px"
-       stroke-width="0.1"
-       xml:space="preserve"
-       id="text27"
-       style="fill:#0000ff;stroke-linecap:square"><tspan
-         x="44.407951"
-         y="-17.347212"
-         stroke-width="0.1"
-         id="tspan27"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow Bold Condensed';fill:#0000ff">electre_tri.py</tspan></text>
-  </g>
+     transform="translate(-0.01976651,-7.408332)" />
 </svg>

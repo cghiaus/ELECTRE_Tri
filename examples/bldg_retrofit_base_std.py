@@ -58,6 +58,8 @@ p_opti, p_pessi = et.pelectre_tri_b(
     credibility_threshold=0.7,
     n_simulations=100)
 
+print("Probabilistic pELECTRE Tri-B with specified base profiles")
+print("Data file:", data_file)
 # Results
 print("\nProbabilistic optimistic ranking:")
 print(p_opti.to_string(na_rep='0'))

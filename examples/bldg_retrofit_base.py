@@ -64,14 +64,17 @@ A, B, T, w = et.read_electre_tri_base(data_file)
 optimistic, pessimistic = et.electre_tri_b(A, B, T, w,
                                            credibility_threshold)
 
+print("ELECTRE Tri-B with specified base profiles")
+print("Data file:", data_file)
+
 # Results
 # Optimistic sorting
 opti_sort = et.sort(optimistic)
-print('Optimistic sorting')
+print('/nOptimistic sorting')
 print(opti_sort.to_frame(name="alternatives").rename_axis("categories"))
 
 
 # Pessimistic sorting
 pessi_sort = et.sort(pessimistic)
-print('Pessimistic sorting')
+print('/nPessimistic sorting')
 print(pessi_sort.to_frame(name="alternatives").rename_axis("categories"))

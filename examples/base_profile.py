@@ -22,6 +22,8 @@ A, B, T, w = et.read_electre_tri_base(data_file)
 opti, pessi = et.electre_tri_b(A, B, T, w,
                                credibility_threshold)
 
+print("ELECTRE Tri-B")
+print("Data file:", data_file)
 # Results
 print("\nOptimistic ranking:")
 print(opti.to_string(na_rep='0'))

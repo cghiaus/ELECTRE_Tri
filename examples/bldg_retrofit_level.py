@@ -56,6 +56,9 @@ T = et.threshold(B, threshold_percent=[0.10, 0.25, 0.50])
 optimistic, pessimistic = et.electre_tri_b(A, B, T, w,
                                            credibility_threshold)
 
+print("ELECTRE Tri-B with specified extreme level profiles")
+print("Data file:", data_file)
+
 # Results
 # Optimistic sorting
 opti_sort = et.sort(optimistic)

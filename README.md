@@ -28,13 +28,14 @@ Click the "Launch Binder" badge above to open the repository in a Jupyter enviro
 
 ```
 ELECTRE_Tri-main
+├── code
+│   └── examples
 ├── data
 ├── docs
 │   ├── explanation
 │   ├── how_to_guides
 │   ├── reference
 │   └── tutorials
-├── examples
 ├── figs
 ├── src
 │   ├── __init__.py

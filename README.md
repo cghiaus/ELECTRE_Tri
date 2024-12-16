@@ -47,6 +47,9 @@ ELECTRE_Tri-main
 └── requirements.txt
 ```
 ## Summary
+
+- `code/examples`: Python scripts that use the modules from `/src` and data from `/data`.
+
 - `data`: .csv data files for ELECTRE Tri-B and Simos' revised method.
 
 - `docs`: documentation
@@ -54,8 +57,6 @@ ELECTRE_Tri-main
     - `how_to_guides`: directions for specific goals; useful to solve specific tasks when accustomed with the methods.
     - `reference`: documentation of functions implemented in the modules of `/src`.
     - `tutorials`: guided steps to solve a meaningful problem; starting point for those new to the methods.
-
-- `examples`: Python scripts that use the modules from `/src` and data from `/data`.
 
 - `figs`: modifiable figures in `.svg` format.
 

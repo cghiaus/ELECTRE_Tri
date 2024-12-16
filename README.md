@@ -53,8 +53,8 @@ ELECTRE_Tri-main
 - `data`: .csv data files for ELECTRE Tri-B and Simos' revised method.
 
 - `docs`: documentation
-    - `explanation`: description of concepts; details on ELECTRE Tri-B and Simos method for weights of criteria.
-    - `how_to_guides`: directions for specific goals; useful to solve specific tasks when accustomed with the methods.
+    - `explanation`: description of concepts; details on ELECTRE Tri-B and Simos' method for weights of criteria.
+    - `how_to_guides`: directions for specific goals; useful to solve tasks when accustomed with the methods.
     - `reference`: documentation of functions implemented in the modules of `/src`.
     - `tutorials`: guided steps to solve a meaningful problem; starting point for those new to the methods.
 
@@ -70,6 +70,6 @@ ELECTRE_Tri-main
 
 1. Launch binder.
 2. Upload your data file (which describes the ELECTRE Tri or the weighing problem) in `/data` folder.
-3. Modify and run the scripts from `/examples` to get the results.
+3. Modify and run the scripts from `code/examples` to get the results.
 
 Read the documentation from `/docs`.

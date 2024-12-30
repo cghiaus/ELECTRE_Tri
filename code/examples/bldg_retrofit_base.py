@@ -58,11 +58,11 @@ print("Data file:", data_file)
 # Results
 # Optimistic sorting
 opti_sort = et.sort(optimistic)
-print('/nOptimistic sorting')
+print("\nOptimistic sorting")
 print(opti_sort.to_frame(name="alternatives").rename_axis("categories"))
 
 
 # Pessimistic sorting
 pessi_sort = et.sort(pessimistic)
-print('/nPessimistic sorting')
+print("\nPessimistic sorting")
 print(pessi_sort.to_frame(name="alternatives").rename_axis("categories"))

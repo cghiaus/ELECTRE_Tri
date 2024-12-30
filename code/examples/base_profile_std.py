@@ -16,7 +16,7 @@ import electre_tri as et
 
 
 # Problem statement
-data_file = "../data/base_profile_std.csv"
+data_file = "../../data/base_profile_std.csv"
 credibility_threshold = 0.7
 
 # Problem solving

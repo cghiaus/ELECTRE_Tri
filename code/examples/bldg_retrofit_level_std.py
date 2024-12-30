@@ -48,7 +48,7 @@ See:
 import electre_tri as et
 
 # Problem statement
-data_file = "../data/bldg_retrofit_level_std.csv"
+data_file = "../../data/bldg_retrofit_level_std.csv"
 
 # Problem solving
 A, S, L, w = et.read_pelectre_tri_level(data_file)

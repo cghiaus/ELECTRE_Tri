@@ -43,7 +43,7 @@ See:
 import electre_tri as et
 
 # Problem statement
-data_file = "../data/bldg_retrofit_base.csv"
+data_file = "../../data/bldg_retrofit_base.csv"
 credibility_threshold = 0.7
 
 # Problem solving

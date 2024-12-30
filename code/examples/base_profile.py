@@ -13,7 +13,7 @@ ELECTRE Tri-B:
 import electre_tri as et
 
 # Problem statement
-data_file = "../data/base_profile.csv"
+data_file = "../../data/base_profile.csv"
 credibility_threshold = 0.7
 
 # Problem solving

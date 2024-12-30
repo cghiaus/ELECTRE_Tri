@@ -45,7 +45,7 @@ See:
 import electre_tri as et
 
 # Problem statement
-data_file = "../data/bldg_retrofit_level.csv"
+data_file = "../../data/bldg_retrofit_level.csv"
 credibility_threshold = 0.7
 
 # Problem solving

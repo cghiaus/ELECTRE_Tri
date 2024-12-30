@@ -67,6 +67,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+pd.set_option('future.no_silent_downcasting', True)
+
 
 def read_electre_tri_base(filename):
     """Reads the data of the ELECTRE Tri problem.

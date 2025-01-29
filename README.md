@@ -46,6 +46,12 @@ ELECTRE_Tri-main
 ├── environment.yml
 └── requirements.txt
 ```
+- `code`: examples in Python.
+- `data`: input files for the methods.
+- `docs`: documentation in Jupyter notebooks.
+- `src`: source code of the two modules.
+
+
 ## Summary
 
 - `code/examples`: Python scripts that use the modules from `/src` and data from `/data`.
